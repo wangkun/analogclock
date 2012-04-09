@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">即刻时钟</string>
+    <string name="alarm">闹钟</string>
+    <string name="alarm_at">闹铃时间: </string>
+    <string name="setting">设置</string>
+    <string name="settings">设置</string>
+    <string name="skin_sound">皮肤和音效</string>
+    <string name="advanced">高级</string>
+    <string name="alarm_repeat">每周重复</string>
+    <string name="alert_sound">闹铃声音</string>
+    <string name="alarm_vibrate">震动</string>
+    <string name="default_label">即刻时钟</string>
+    <string name="never_repeat">不重复</string>
+    <string name="every_day">每天重复</string>
+    <string name="day_concat">, </string>
+    
+    <!-- Setting title for changing the snooze duration. -->
+    <string name="snooze_duration_title">贪睡功能</string>
+    <!-- Entries listed in the ListPreference when invoking the snooze duration
+         preference. -->
+    <string-array name="snooze_duration_entries">
+      	<item>5分钟</item>
+      	<item>10分钟</item>
+      	<item>15分钟</item>
+      	<item>20分钟</item>
+      	<item>25分钟</item>
+      	<item>30分钟</item>
+    	<item>无</item>
+	</string-array>
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the snooze_duration_entries above. -->
+    <string-array name="snooze_duration_values">
+	      <item>5</item>
+	      <item>10</item>
+	      <item>15</item>
+	      <item>20</item>
+	      <item>25</item>
+	      <item>30</item>
+	   	 <item>0</item>
+	</string-array>
+
+    <string name="fade_in_length_title">声音渐进</string>
+	<string name="fade_in_length_summary">设置铃声由小变大</string>
+	<!-- Entries listed in the ListPreference when invoking the snooze duration
+         preference. -->
+    <string-array name="fade_in_length_entries">
+	      <item>1分钟</item>
+	      <item>2分钟</item>
+	      <item>5分钟</item>
+	      <item>10分钟</item>
+	      <item>15分钟</item>
+	      <item>30分钟</item>
+	    <item>无</item>
+	</string-array>
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the snooze_duration_entries above. -->
+    <string-array name="fade_in_length_values">
+	      <item>1</item>
+	      <item>2</item>
+	      <item>5</item>
+	      <item>10</item>
+	      <item>15</item>
+	      <item>30</item>
+	    <item>0</item>
+	</string-array>
+	
+    
+    <!-- Setting labels on Set alarm screen: Set time  -->
+    <string name="time">时间</string>
+
+    <!-- Button labels on the alarm dialog: Dismiss -->
+    <string name="alarm_alert_dismiss_text">知道了</string>
+
+    <!-- Alarm Alert screen: this message is shown after an alarm rung
+         unattended for a number of minutes.  It tells the user that
+         the alarm has been silenced.-->
+    <string name="alarm_alert_alert_silenced">铃声静音<xliff:g id="minutes">%d</xliff:g>分钟</string>
+
+    <!-- Button labels on the alarm dialog: Snooze -->
+    <string name="alarm_alert_snooze_text">再睡会儿</string>
+
+    <!-- Toast that appears after Alarm is snoozed from the Alarm
+         dialog. Says the alarm will snooze for xxx minutes.  -->
+    <string name="alarm_alert_snooze_set">再睡<xliff:g id="minutes">%d</xliff:g>分钟.</string>
+
+    <!-- 0: nothing
+         1: days
+         2:      hours
+         3: days hours
+         4:            minutes
+         5: days       minutes
+         6:      hours minutes
+         7: days hours minutes
+    --><skip />
+    
+    
+
+    <!-- Alarm confirmation toast: Describes how long from now until
+         alarm fires -->
+    <string-array name="alarm_set">
+        <item>此次闹钟距离现在不到1分钟</item>
+        <item>此次闹钟距离现在 <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>.</item>
+        <item>此次闹钟距离现在 <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g>.</item>
+        <item>此次闹钟距离现在 <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> .</item>
+        <item>此次闹钟距离现在 <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g>.</item>
+        <item>此次闹钟距离现在 <xliff:g id="DAYS" example="2 days">%1$s</xliff:g> <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> .</item>
+        <item>此次闹钟距离现在 <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g> <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> .</item>
+        <item>此次闹钟距离现在 <xliff:g id="DAYS" example="2 days">%1$s</xliff:g>, <xliff:g id="HOURS" example="2 hours">%2$s</xliff:g>,  <xliff:g id="MINUTES" example="2 minutes">%3$s</xliff:g> .</item>
+    </string-array>
+
+    <!-- Alarm confirmation toast: singular day -->
+    <string name="day">"1天"</string>
+
+    <!-- Alarm confirmation toast: plural days -->
+    <string name="days">"<xliff:g id="days">%s</xliff:g>天"</string>
+
+    <!-- Alarm confirmation toast: singular hour -->
+    <string name="hour">1小时</string>
+
+    <!-- Alarm confirmation toast: plural hours -->
+    <string name="hours"><xliff:g id="hours">%s</xliff:g>小时</string>
+
+    <!-- Alarm confirmation toast: singular minute  -->
+    <string name="minute">"1分钟"</string>
+
+    <!-- Alarm confirmation toast: plural minutes  -->
+    <string name="minutes">"<xliff:g id="minutes">%s</xliff:g>分钟"</string>
+
+    
+    
+    <!-- Setting title for changing the alarm volume. -->
+    <string name="alarm_volume_title">音量</string>
+
+    <!-- Setting summary for changing the alarm volume. -->
+    <string name="alarm_volume_summary">设置闹铃的音量大小</string>
+
+    <!-- Summary for the alarm preference when silent is chosen. -->
+    <string name="silent_alarm_summary">静音</string>
+
+    <!-- Text to display in the small text of the notification -->
+    <string name="alarm_notify_text">选择再睡会儿还是关闭</string>
+
+    <!-- Text to display in the notification ticker and label -->
+    <string name="alarm_notify_snooze_label"><xliff:g id="label">%s</xliff:g>（再睡会儿）</string>
+
+    <!-- Text to display in the notification when the alarm has been snoozed -->
+    <string name="alarm_notify_snooze_text">闹钟设置为<xliff:g id="time">%s</xliff:g>.单击取消.</string>
+    <string name="alarm_ampm">闹钟在上午下午</string>
+    <string-array name="sound_type_values">
+      <item>0</item>
+      <item>1</item>
+	</string-array>
+<string name="sound_type_title">闹铃类型</string>
+	<string-array name="sound_type_entries">
+      <item>自定义音乐</item>
+      <item>经典铃声</item>
+	</string-array>
+<string name="sound_type_summay">选择铃响类型：音乐或铃声</string>
+<string name="select_song">选择歌曲</string>
+<string name="time_over_string">定时器时间到啦~</string>
+<string name="timer_title">定时器</string>
+<string name="stopwatch_title">秒表</string>
+<string-array name="sound_name_entries">
+      	<item>递增</item>
+      	<item>鸟鸣</item>
+      	<item>经典嘀嘀</item>
+      	<item>布谷鸟</item>
+      	<item>数字铃音</item>
+      	<item>电子铃音</item>
+    	<item>高音</item>
+    	<item>琴声</item>
+    	<item>老闹钟</item>
+    	<item>公鸡叫</item>
+    	<item>下课铃</item>
+	</string-array>
+	<string name="slient">静音</string>
+	<string name="never">无</string>
+	<string name="min">分钟</string>
+	<string name="sound">铃声</string>
+	<string name="music">音乐</string>
+	<string name="dialog_stop_title">停止计时？</string>
+<string name="dialog_ok_title"> 是 </string>
+<string name="dialog_cancel_title"> 否 </string>
+</resources>

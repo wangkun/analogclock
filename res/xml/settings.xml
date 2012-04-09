@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings">
+	<PreferenceCategory android:key = "sound"
+	    android:title="@string/alarm">
+	    <!-- 
+	    <CheckBoxPreference android:key="alarm_ampm"
+        	android:persistent="false"
+        	android:title="@string/alarm_ampm"/>
+        	 -->
+	    <com.jike.mobile.analogclock.settingwidget.RepeatPreference
+	        android:persistent="false"
+	        android:key="setRepeat"
+	        android:title="@string/alarm_repeat" />
+	    <!-- <com.jike.mobile.analogclock.settingwidget.AlertSoundPreference
+	        android:persistent="false"
+	        android:key="alertSounds"
+	        android:title="@string/alert_sound" /> 
+	        -->
+	    <ListPreference
+	        android:key="sound_type"
+	        android:title="@string/sound_type_title"
+	        android:summary="@string/sound_type_summay"
+	        android:entries="@array/sound_type_entries"
+	        android:entryValues="@array/sound_type_values"
+	        android:defaultValue="2"
+	        android:dialogTitle="@string/sound_type_title" />
+	    </PreferenceCategory>
+	    <PreferenceCategory 
+	    android:title="@string/advanced">
+	    <CheckBoxPreference android:key="vibrate"
+        	android:persistent="false"
+        	android:title="@string/alarm_vibrate"/>
+		<ListPreference
+	        android:key="snooze_duration"
+	        android:title="@string/snooze_duration_title"
+	        android:entries="@array/snooze_duration_entries"
+	        android:entryValues="@array/snooze_duration_values"
+	        android:dialogTitle="@string/snooze_duration_title" />
+	        
+		<ListPreference
+	        android:key="fade_in_length"
+	        android:title="@string/fade_in_length_title"
+	        android:dialogTitle="@string/fade_in_length_title"
+	        android:entries="@array/fade_in_length_entries"
+	        android:entryValues="@array/fade_in_length_values"
+	        />
+		<!--  <ListPreference
+	        android:key="alarm_min_interval"
+	        android:title="@string/fade_in_length_title"
+	        android:dialogTitle="@string/fade_in_length_title"
+	        android:entries="@array/fade_in_length_entries"
+	        android:entryValues="@array/fade_in_length_values"
+	        />
+	        -->
+		<com.jike.mobile.analogclock.settingwidget.JikeVolumePreference 
+    	android:key="alarm_volume"
+    	android:title="@string/alarm_volume_title"
+        android:summary="@string/alarm_volume_summary"
+        android:dialogTitle="@string/alarm_volume_title"
+        android:persistent="false"
+         />
+	</PreferenceCategory>
+	<!--  
+	<PreferenceCategory android:title="@string/skin_sound">
+	    <Preference android:key="skin"
+	        android:persistent="false"
+	        android:title="skin"
+	        android:summary="chose skin"/>
+	    <Preference android:key="sound"
+	        android:persistent="false"
+	        android:title="sound"
+	        android:summary="open sound"/>
+	    
+	</PreferenceCategory>
+	-->
+	<!--  
+	<PreferenceCategory android:title="@string/advanced">
+	    <CheckBoxPreference
+	        android:key="slide_finger"
+	        android:title="Slide finger ↑↓"
+	        android:summary="Adjust the brightness" 
+	        android:defaultValue="true"/>
+	    <CheckBoxPreference
+	        android:key="autolock_charger"
+	        android:title="unlock screnn if in charger"
+	        android:defaultValue="true"/>
+	</PreferenceCategory>
+	  -->  
+</PreferenceScreen>

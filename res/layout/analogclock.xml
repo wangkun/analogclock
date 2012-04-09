@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:handsrc="http://schemas.android.com/apk/res/com.jike.mobile.analogclock"
+    android:id="@+id/analogclock_relativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/background_jk1"
+     >
+<!-- android:background="@drawable/background_jk1" -->    
+    <LinearLayout
+        android:id="@+id/showtime_linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:layout_alignTop="@+id/alarm_buttom" 
+        android:layout_marginTop="40dp" >
+
+        <TextView
+            android:id="@+id/alarm_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alarm_at" 
+            android:textStyle="bold" 
+			android:shadowColor="#ff000000"
+			android:shadowDx="3"
+	        android:shadowDy="3"     
+	        android:shadowRadius="1" 
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TextView
+            android:id="@+id/alarmtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp" 
+			android:textStyle="bold" 
+			android:shadowColor="#ff000000"
+			android:shadowDx="3"
+	        android:shadowDy="3"     
+	        android:shadowRadius="1" 
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+    
+	<ImageView android:id="@+id/analog_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/dial_jk1"
+        android:contentDescription="@string/alarm"
+         />
+         <!-- 
+	<com.jike.mobile.analogclock.widget.BackgroundImageView
+        android:id="@+id/analog_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        handsrc:myhandsrc="@drawable/dial_jk1" /> -->
+
+      <com.jike.mobile.analogclock.widget.HandImageView
+        android:id="@+id/alarm_hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        handsrc:myhandsrc="@drawable/alarm_hand_jk1" />
+   <!--  --> 
+    <com.jike.mobile.analogclock.widget.HandImageView
+        android:id="@+id/hour_hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        handsrc:myhandsrc="@drawable/hour_hand_jk1"
+        />
+    <com.jike.mobile.analogclock.widget.HandImageView
+        android:id="@+id/min_hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        handsrc:myhandsrc="@drawable/min_hand_jk1"
+        />
+
+    <com.jike.mobile.analogclock.widget.HandImageView
+        android:id="@+id/sec_hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        handsrc:myhandsrc="@drawable/sec_hand_jk1" 
+        />
+    <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/analog_clock"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/alarm">
+        </ImageButton>
+        
+    <ImageButton 
+        android:id="@+id/stopwatch_button"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+		android:src="@drawable/timer_menu_icon"
+		android:background="@android:color/transparent"
+        android:contentDescription="@string/alarm"
+        />   
+    <ImageButton 
+        android:id="@+id/alarm_buttom"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="24dp"
+		android:src="@drawable/alarm_on"
+		android:background="@android:color/transparent"
+        android:contentDescription="@string/alarm"
+        />
+
+    <!--
+            android:src="@drawable/alarm_image_button"
+        android:background="@drawable/alarm_button_bk_jk1"  
+    
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/showtime_linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:text="@string/none" />
+	-->
+<!--
+    <Button
+        android:id="@+id/lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="lock" />
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="more" /> @string/setting -->
+
+		
+        <ImageButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/analog_clock"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/alarm">
+        </ImageButton>
+        	<ImageButton
+		        android:id="@+id/lock"
+		        android:layout_width="72dp"
+		        android:layout_height="72dp"
+		        android:layout_alignParentBottom="true"
+		        android:layout_alignParentLeft="true"
+		        android:layout_marginLeft="24dp"
+		        android:layout_marginBottom="24dp"
+		        android:src="@drawable/lock_off" 
+		        android:background="@android:color/transparent"
+		        android:contentDescription="@string/alarm"/>
+		    <ImageButton
+		        android:id="@+id/setting"
+		        android:layout_width="72dp"
+		        android:layout_height="72dp"
+		        android:layout_alignParentBottom="true"
+		        android:layout_alignParentRight="true"
+		        android:layout_marginRight="24dp"
+		        android:layout_marginBottom="24dp"
+		        android:src="@drawable/setting_image_button" 
+		        android:background="@android:color/transparent"
+		        android:contentDescription="@string/alarm"/>
+            
+        
+		
+    
+
+</RelativeLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">"時計"</string>
+    <string name="alarm">目覚まし時計</string>
+    <string name="alarm_at">アラーム時間： </string>
+    <string name="setting">"設定"</string>
+    <string name="skin_sound">皮肤和音效</string>
+    <string name="advanced">高度な</string>
+    <string name="alert_sound">アラーム音</string>
+    <string name="default_label">アラーム</string>
+    <string name="never_repeat">繰り返さない</string>
+    
+    <!-- Setting title for changing the snooze duration. -->
+    <!-- Entries listed in the ListPreference when invoking the snooze duration
+         preference. -->
+    <string-array name="snooze_duration_entries">
+      	<item>5分</item>
+      	<item>10分</item>
+      	<item>15分</item>
+      	<item>20分</item>
+      	<item>25分</item>
+      	<item>30分</item>
+    	<item>无</item>
+	</string-array>
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the snooze_duration_entries above. -->
+    <string-array name="snooze_duration_values">
+	      <item>5</item>
+	      <item>10</item>
+	      <item>15</item>
+	      <item>20</item>
+	      <item>25</item>
+	      <item>30</item>
+	   	 <item>0</item>
+	</string-array>
+
+    <string name="fade_in_length_title">プログレッシブサウンド</string>
+	<string name="fade_in_length_summary">小から大へのトーンを設定します。</string>
+	<!-- Entries listed in the ListPreference when invoking the snooze duration
+         preference. -->
+    <string-array name="fade_in_length_entries">
+	      <item>1分</item>
+	      <item>2分</item>
+	      <item>5分</item>
+	      <item>10分</item>
+	      <item>15分</item>
+	      <item>30分</item>
+	    <item>无</item>
+	</string-array>
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the snooze_duration_entries above. -->
+    <string-array name="fade_in_length_values">
+	      <item>1</item>
+	      <item>2</item>
+	      <item>5</item>
+	      <item>10</item>
+	      <item>15</item>
+	      <item>30</item>
+	    <item>0</item>
+	</string-array>
+	
+    
+
+    <!-- 0: nothing
+         1: days
+         2:      hours
+         3: days hours
+         4:            minutes
+         5: days       minutes
+         6:      hours minutes
+         7: days hours minutes
+    --><skip />
+    
+        <string name="alarm_vibrate" msgid="3476686921490362230">"バイブレーション"</string>
+    <string name="alarm_repeat" msgid="7242985466344233206">"繰り返し"</string>
+    <string name="alert" msgid="6539852766423700221">"アラーム音"</string>
+    <string name="time" msgid="8067216534232296518">"時刻"</string>
+    <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"停止"</string>
+    <string name="alarm_alert_alert_silenced" msgid="7918075929961104202">"アラームは<xliff:g id="MINUTES">%d</xliff:g>分間鳴って止まりました"</string>
+    <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"スヌーズ"</string>
+    <string name="alarm_alert_snooze_set" msgid="656470966696912087">"<xliff:g id="MINUTES">%d</xliff:g>分後に再通知します"</string>
+    
+
+    <string-array name="alarm_set">
+    <item msgid="5163476010406761625">"アラームは今から1分以内に設定されています。"</item>
+    <item msgid="7110525731259629055">"アラームは<xliff:g id="DAYS">%1$s</xliff:g>後に設定されています。"</item>
+    <item msgid="7003982794086186185">"アラームは<xliff:g id="HOURS">%2$s</xliff:g>後に設定されています。"</item>
+    <item msgid="7311021123230077742">"アラームは<xliff:g id="DAYS">%1$s</xliff:g>と<xliff:g id="HOURS">%2$s</xliff:g>後に設定されています。"</item>
+    <item msgid="8431715191823114872">"アラームは<xliff:g id="MINUTES">%3$s</xliff:g>後に設定されています。"</item>
+    <item msgid="3244151088673185428">"アラームは<xliff:g id="DAYS">%1$s</xliff:g>と<xliff:g id="MINUTES">%3$s</xliff:g>後に設定されています。"</item>
+    <item msgid="3663661342600168814">"アラームは<xliff:g id="HOURS">%2$s</xliff:g><xliff:g id="MINUTES">%3$s</xliff:g>後に設定されています。"</item>
+    <item msgid="7779544127785487304">"アラームは<xliff:g id="DAYS">%1$s</xliff:g>と<xliff:g id="HOURS">%2$s</xliff:g><xliff:g id="MINUTES">%3$s</xliff:g>後に設定されています。"</item>
+  </string-array>
+    <string name="day" msgid="7984755014526510295">"1日"</string>
+    <string name="days" msgid="2070509222727852210">"<xliff:g id="DAYS">%s</xliff:g>日"</string>
+    <string name="hour" msgid="2546819039651509323">"1時間"</string>
+    <string name="hours" msgid="2071487018566991613">"<xliff:g id="HOURS">%s</xliff:g>時間"</string>
+    <string name="minute" msgid="2486157997434653710">"1分"</string>
+    <string name="minutes" msgid="6115838729146292526">"<xliff:g id="MINUTES">%s</xliff:g>分"</string>
+    <string name="every_day" msgid="1058994798884544691">"毎日"</string>
+    <string name="never" msgid="54104287800571769">"繰り返しなし"</string>
+    <string name="day_concat" msgid="971998564991636532">"、 "</string>
+    <string name="clock_instructions" msgid="3118560284915857690">"表示する時計を選択してください。"</string>
+    <string name="analog_gadget" msgid="1670505720837152766">"アナログ時計"</string>
+    <string name="settings" msgid="5849739030579520686">"設定"</string>
+    <string name="alarm_in_silent_mode_title" msgid="3892612644543516705">"マナーモード中のアラーム"</string>
+    <string name="alarm_in_silent_mode_summary" msgid="6042500263899922832">"マナーモード中もアラームを鳴らす"</string>
+    <string name="snooze_duration_title" msgid="1471249885139952670">"スヌーズ間隔"</string>
+
+    
+    
+    
+    <string name="alarm_volume_title" msgid="8506245173912428522">"アラームの音量"</string>
+    <string name="alarm_volume_summary" msgid="8957440373896242438">"アラームの音量を設定する"</string>
+    <string name="silent_alarm_summary" msgid="8605302849408279221">"マナーモード"</string>
+    <string name="alarm_notify_text" msgid="4146350965933990093">"アラームのスヌーズ/解除を選択します。"</string>
+    <string name="alarm_notify_snooze_label" msgid="5404083762646377829">"<xliff:g id="LABEL">%s</xliff:g>（スヌーズ）"</string>
+    <string name="alarm_notify_snooze_text" msgid="8004830999152609519">"アラームは<xliff:g id="TIME">%s</xliff:g>に設定されています。選択すると解除されます。"</string>
+    
+    <string-array name="sound_type_values">
+      <item>0</item>
+      <item>1</item>
+	</string-array>
+<string name="sound_type_title">アラームタイプ</string>
+	<string-array name="sound_type_entries">
+      <item>カスタム音楽</item>
+      <item>クラシック着メロ</item>
+	</string-array>
+<string name="sound_type_summay">が鳴っタイプ選択してください。音楽や着メロ</string>
+<string name="select_song">セレクト歌</string>
+<string name="time_over_string">タイマー時間~</string>
+<string name="timer_title">タイマー</string>
+<string name="stopwatch_title">ストップウォッチ</string>
+<string-array name="sound_name_entries">
+      	<item>インクリメント</item>
+      	<item>鳥</item>
+      	<item>古典</item>
+      	<item>カッコウ</item>
+      	<item>デジタルの着信音</item>
+      	<item>電子着メロ</item>
+    	<item>高音</item>
+    	<item>ピース</item>
+    	<item>古い目覚まし時計</item>
+    	<item>コックカラス</item>
+    	<item>ベル</item>
+	</string-array>
+	<string name="slient">ミュート</string>
+	<string name="min">分</string>
+	<string name="sound">​​着メロ</string>
+	<string name="music">音楽</string>
+	<string name="dialog_stop_title">は、クロックを停止する？</string>
+<string name="dialog_ok_title"> OK </string>
+<string name="dialog_cancel_title"> はありません </string>
+</resources>

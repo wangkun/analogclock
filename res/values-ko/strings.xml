@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">"시계 도구"</string>
+    <string name="alarm">"알람 시계"</string>
+    <string name="alarm_at">"경보 시간 :"</string>
+    <string name="setting">설정</string>
+    <string name="advanced">"고급"</string>
+    <string name="alert_sound">"알람 소리가"</string>
+    <string name="default_label">"알람 시계"</string>
+    <string name="never_repeat">"반복하지"</string>
+    
+    <string name="alarm_vibrate" msgid="3476686921490362230">"진동"</string>
+    <string name="alarm_repeat" msgid="7242985466344233206">"반복"</string>
+    <string name="alert" msgid="6539852766423700221">"벨소리"</string>
+    <string name="time" msgid="8067216534232296518">"시간"</string>
+    <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"해제"</string>
+    <string name="alarm_alert_alert_silenced" msgid="7918075929961104202">"<xliff:g id="MINUTES">%d</xliff:g>분 후 알람이 중지됨"</string>
+    <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"다시 울림"</string>
+    <string name="alarm_alert_snooze_set" msgid="656470966696912087">"<xliff:g id="MINUTES">%d</xliff:g>분 동안 알람 일시 중지"</string>
+  <string-array name="alarm_set">
+    <item msgid="5163476010406761625">"지금부터 1분 미만 후로 알람이 설정됩니다."</item>
+    <item msgid="7110525731259629055">"지금부터 <xliff:g id="DAYS">%1$s</xliff:g> 후로 알람이 설정됩니다."</item>
+    <item msgid="7003982794086186185">"지금부터 <xliff:g id="HOURS">%2$s</xliff:g> 후로 알람이 설정됩니다."</item>
+    <item msgid="7311021123230077742">"지금부터 <xliff:g id="DAYS">%1$s</xliff:g> <xliff:g id="HOURS">%2$s</xliff:g> 후로 알람이 설정됩니다."</item>
+    <item msgid="8431715191823114872">"지금부터 <xliff:g id="MINUTES">%3$s</xliff:g> 후로 알람이 설정됩니다."</item>
+    <item msgid="3244151088673185428">"지금부터 <xliff:g id="DAYS">%1$s</xliff:g> <xliff:g id="MINUTES">%3$s</xliff:g> 후로 알람이 설정됩니다."</item>
+    <item msgid="3663661342600168814">"지금부터 <xliff:g id="HOURS">%2$s</xliff:g> <xliff:g id="MINUTES">%3$s</xliff:g> 후로 알람이 설정됩니다."</item>
+    <item msgid="7779544127785487304">"지금부터 <xliff:g id="DAYS">%1$s</xliff:g> <xliff:g id="HOURS">%2$s</xliff:g> <xliff:g id="MINUTES">%3$s</xliff:g> 후로 알람이 설정됩니다."</item>
+  </string-array>
+    <string name="day" msgid="7984755014526510295">"1일"</string>
+    <string name="days" msgid="2070509222727852210">"<xliff:g id="DAYS">%s</xliff:g>일"</string>
+    <string name="hour" msgid="2546819039651509323">"1시간"</string>
+    <string name="hours" msgid="2071487018566991613">"<xliff:g id="HOURS">%s</xliff:g>시간"</string>
+    <string name="minute" msgid="2486157997434653710">"1분"</string>
+    <string name="minutes" msgid="6115838729146292526">"<xliff:g id="MINUTES">%s</xliff:g>분"</string>
+    <string name="every_day" msgid="1058994798884544691">"매일"</string>
+    <string name="never" msgid="54104287800571769">"반복 안함"</string>
+    <string name="day_concat" msgid="971998564991636532">", "</string>
+    <string name="clock_instructions" msgid="3118560284915857690">"표시할 시계를 선택하세요."</string>
+    <string name="analog_gadget" msgid="1670505720837152766">"아날로그 시계"</string>
+    <string name="settings" msgid="5849739030579520686">"설정"</string>
+    <string name="alarm_in_silent_mode_title" msgid="3892612644543516705">"무음 모드에서 알람 설정"</string>
+    <string name="alarm_in_silent_mode_summary" msgid="6042500263899922832">"무음 모드에서도 알람이 울리도록 설정"</string>
+    <string name="snooze_duration_title" msgid="1471249885139952670">"다시 울림 간격"</string>
+    
+    <!-- Setting title for changing the snooze duration. -->
+    <!-- Entries listed in the ListPreference when invoking the snooze duration
+         preference. -->
+    <string-array name="snooze_duration_entries">
+      	<item>5분</item>
+      	<item>10분</item>
+      	<item>15분</item>
+      	<item>20분</item>
+      	<item>25분</item>
+      	<item>30분</item>
+    	<item>아니</item>
+	</string-array>
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the snooze_duration_entries above. -->
+    <string-array name="snooze_duration_values">
+	      <item>5</item>
+	      <item>10</item>
+	      <item>15</item>
+	      <item>20</item>
+	      <item>25</item>
+	      <item>30</item>
+	   	 <item>0</item>
+	</string-array>
+
+    <string name="fade_in_length_title">"사운드 프로 그레시브"</string>
+	<string name="fade_in_length_summary">"소형에서 대형까지 음색을 설정합니다."</string>
+	<!-- Entries listed in the ListPreference when invoking the snooze duration
+         preference. -->
+    <string-array name="fade_in_length_entries">
+	      <item>1분</item>
+	      <item>2분</item>
+	      <item>5분</item>
+	      <item>10분</item>
+	      <item>15분</item>
+	      <item>30분</item>
+	    <item>아니</item>
+	</string-array>
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the snooze_duration_entries above. -->
+    <string-array name="fade_in_length_values">
+	      <item>1</item>
+	      <item>2</item>
+	      <item>5</item>
+	      <item>10</item>
+	      <item>15</item>
+	      <item>30</item>
+	    <item>0</item>
+	</string-array>
+	
+    
+
+    <!-- 0: nothing
+         1: days
+         2:      hours
+         3: days hours
+         4:            minutes
+         5: days       minutes
+         6:      hours minutes
+         7: days hours minutes
+    --><skip />
+    
+    
+
+	<string name="alarm_volume_title" msgid="8506245173912428522">"알람 볼륨"</string>
+    <string name="alarm_volume_summary" msgid="8957440373896242438">"알람 볼륨 설정"</string>
+    <string name="silent_alarm_summary" msgid="8605302849408279221">"무음"</string>
+    <string name="alarm_notify_text" msgid="4146350965933990093">"알람을 일시 중지하거나 해제하려면 선택하세요."</string>
+    <string name="alarm_notify_snooze_label" msgid="5404083762646377829">"<xliff:g id="LABEL">%s</xliff:g>(알람 일시 중지됨)"</string>
+    <string name="alarm_notify_snooze_text" msgid="8004830999152609519">"<xliff:g id="TIME">%s</xliff:g>으로 알람이 설정되었습니다. 취소하려면 선택하세요."</string>
+
+    
+    
+    <string-array name="sound_type_values">
+      <item>0</item>
+      <item>1</item>
+	</string-array>
+<string name="sound_type_title">"알람 유형"</string>
+	<string-array name="sound_type_entries">
+      <item>"정의 음악"</item>
+      <item>"클래식 벨소리는 "</item>
+	</string-array>
+<string name="sound_type_summay">"선택 유형 울려서 음악이나 벨소리 "</string>
+<string name="select_song">"선택 곡"</string>
+<string name="time_over_string">"타이머 시간 "</string>
+<string name="timer_title">"타이머"</string>
+<string name="stopwatch_title">"스톱워치"</string>
+<string-array name="sound_name_entries">
+      	<item>"증가"</item>
+      	<item>"조류"</item>
+      	<item>"고전"</item>
+      	<item>"뻐꾸기"</item>
+      	<item>"디지털 벨소리"</item>
+      	<item>"전자 벨소리는"</item>
+    	<item>"고음"</item>
+    	<item>"사운드"</item>
+    	<item>"오래된 알람 시계"</item>
+    	<item>"콕 까마귀"</item>
+    	<item>"종"</item>
+	</string-array>
+	<string name="slient">"음소거"</string>
+	<string name="min">분</string>
+	<string name="sound">"벨소리에게"</string>
+	<string name="music">"음악"</string>
+	<string name="dialog_stop_title">"은 시계를 중지?"</string>
+<string name="dialog_ok_title">" 정지 "</string>
+<string name="dialog_cancel_title">"아니요"</string>
+</resources>

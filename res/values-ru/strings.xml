@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Будильник</string>
+    <string name="alarm">"сигнализации"</string>
+    <string name="alarm_at">"установить будильник на:"</string>
+    <string name="setting">"установки"</string>
+    <string name="advanced">"передовой"</string>
+    <string name="alert_sound">"Звук тревоги "</string>
+    <string name="never_repeat">"никогда не повторить"</string>
+    
+    <string name="label" msgid="162189613902857319">"Будильник"</string>
+    <string name="default_label" msgid="5590025289805630372">"Будильник"</string>
+    <string name="set_alarm" msgid="9148359866152726808">"Установить будильник"</string>
+    <string name="alarm_vibrate" msgid="3476686921490362230">"Вибросигнал"</string>
+    <string name="alarm_repeat" msgid="7242985466344233206">"Дни недели"</string>
+    <string name="alert" msgid="6539852766423700221">"Звук сигнала"</string>
+    <string name="time" msgid="8067216534232296518">"Время"</string>
+    <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"Выключить"</string>
+    <string name="alarm_alert_alert_silenced" msgid="7918075929961104202">"Будильник звонил <xliff:g id="MINUTES">%d</xliff:g> мин."</string>
+    <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"Отложить"</string>
+    <string name="alarm_alert_snooze_set" msgid="656470966696912087">"Повтор сигнала через <xliff:g id="MINUTES">%d</xliff:g> мин."</string>
+  <string-array name="alarm_set">
+    <item msgid="5163476010406761625">"До срабатывания будильника осталось меньше одной минуты."</item>
+    <item msgid="7110525731259629055">"Будильник зазвонит через <xliff:g id="DAYS">%1$s</xliff:g>."</item>
+    <item msgid="7003982794086186185">"Будильник зазвонит через <xliff:g id="HOURS">%2$s</xliff:g>."</item>
+    <item msgid="7311021123230077742">"Будильник зазвонит через <xliff:g id="DAYS">%1$s</xliff:g> и <xliff:g id="HOURS">%2$s</xliff:g>."</item>
+    <item msgid="8431715191823114872">"Будильник зазвонит через <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
+    <item msgid="3244151088673185428">"Будильник зазвонит через <xliff:g id="DAYS">%1$s</xliff:g> и <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
+    <item msgid="3663661342600168814">"Будильник зазвонит через <xliff:g id="HOURS">%2$s</xliff:g> <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
+    <item msgid="7779544127785487304">"Будильник зазвонит через <xliff:g id="DAYS">%1$s</xliff:g>, <xliff:g id="HOURS">%2$s</xliff:g> и <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
+  </string-array>
+    <string name="day" msgid="7984755014526510295">"1 день"</string>
+    <string name="days" msgid="2070509222727852210">"<xliff:g id="DAYS">%s</xliff:g> дн."</string>
+    <string name="hour" msgid="2546819039651509323">"1 час"</string>
+    <string name="hours" msgid="2071487018566991613">"<xliff:g id="HOURS">%s</xliff:g> ч."</string>
+    <string name="minute" msgid="2486157997434653710">"1 минуту"</string>
+    <string name="minutes" msgid="6115838729146292526">"<xliff:g id="MINUTES">%s</xliff:g> мин."</string>
+    <string name="every_day" msgid="1058994798884544691">"каждый день"</string>
+    <string name="never" msgid="54104287800571769">"Не выбрано"</string>
+    <string name="day_concat" msgid="971998564991636532">", "</string>
+    <string name="clock_instructions" msgid="3118560284915857690">"Выберите вид часов."</string>
+    <string name="analog_gadget" msgid="1670505720837152766">"Часы со стрелками"</string>
+    <string name="settings" msgid="5849739030579520686">"Настройки"</string>
+    <string name="alarm_in_silent_mode_title" msgid="3892612644543516705">"Включать всегда"</string>
+    <string name="alarm_in_silent_mode_summary" msgid="6042500263899922832">"Подавать сигнал, даже если телефон работает в режиме без звука"</string>
+    <string name="snooze_duration_title" msgid="1471249885139952670">"Интервал повтора сигнала"</string>
+    <string name="alarm_volume_title" msgid="8506245173912428522">"Громкость будильника"</string>
+    <string name="alarm_volume_summary" msgid="8957440373896242438">"Настройка громкости будильника"</string>
+    <string name="silent_alarm_summary" msgid="8605302849408279221">"Без звука"</string>
+    <string name="alarm_notify_text" msgid="4146350965933990093">"Нажмите, чтобы прервать или отключить."</string>
+    <string name="alarm_notify_snooze_label" msgid="5404083762646377829">"<xliff:g id="LABEL">%s</xliff:g> (отложено)"</string>
+    <string name="alarm_notify_snooze_text" msgid="8004830999152609519">"Будильник зазвонит в <xliff:g id="TIME">%s</xliff:g>. Отменить?"</string>
+    <!-- Entries listed in the ListPreference when invoking the snooze duration
+         preference. -->
+    <string-array name="snooze_duration_entries">
+      	<item>5 минут</item>
+      	<item>10 минут</item>
+      	<item>15 минут</item>
+      	<item>20 минут</item>
+      	<item>25 минут</item>
+      	<item>30 минут</item>
+    	<item>"Не выбрано"</item>
+	</string-array>
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the snooze_duration_entries above. -->
+    <string-array name="snooze_duration_values">
+	      <item>5</item>
+	      <item>10</item>
+	      <item>15</item>
+	      <item>20</item>
+	      <item>25</item>
+	      <item>30</item>
+	   	 <item>0</item>
+	</string-array>
+
+    <string name="fade_in_length_title">"Звук исчезают в"</string>
+	<string name="fade_in_length_summary">"установить предупреждения исчезают во времени"</string>
+	<!-- Entries listed in the ListPreference when invoking the snooze duration
+         preference. -->
+    <string-array name="fade_in_length_entries">
+	      <item>1 минут</item>
+	      <item>2 минут</item>
+	      <item>5 минут</item>
+	      <item>10 минут</item>
+	      <item>15 минут</item>
+	      <item>30 минут</item>
+	    <item>"Не выбрано"</item>
+	</string-array>
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the snooze_duration_entries above. -->
+    <string-array name="fade_in_length_values">
+	      <item>1</item>
+	      <item>2</item>
+	      <item>5</item>
+	      <item>10</item>
+	      <item>15</item>
+	      <item>30</item>
+	    <item>0</item>
+	</string-array>
+	
+    
+
+    <!-- 0: nothing
+         1: days
+         2:      hours
+         3: days hours
+         4:            минут
+         5: days       минут
+         6:      hours минут
+         7: days hours минут
+    --><skip />
+
+    <string-array name="sound_type_values">
+      <item>0</item>
+      <item>1</item>
+	</string-array>
+<string name="sound_type_title">"тип сигнализации "</string>
+	<string-array name="sound_type_entries">
+      <item>"музыки"</item>
+      <item>"Звук"</item>
+	</string-array>
+<string name="sound_type_summay">"Выберите тип звука: Мелодия или музыки "</string>
+<string name="select_song">"Выбор музыки "</string>
+<string name="time_over_string">"время закончилось!"</string>
+<string name="timer_title">"Таймер "</string>
+<string name="stopwatch_title">"Секундомер"</string>
+<!-- "Ascending", "Birds", "Classic",
+			"Cuckoo", "Digital", "Electronic", "High Tone", "Mbira",
+			"Old Clock", "Rooster", "School Bell", -->
+<string-array name="sound_name_entries">
+      	<item>"возрастанию"</item>
+      	<item>"Птицы"</item>
+      	<item>Classic</item>
+      	<item>"кукушки"</item>
+      	<item>Digital</item>
+      	<item>"Электронные"</item>
+    	<item>"Высокие тона "</item>
+    	<item>Mbira</item>
+    	<item>"Старые часы "</item>
+    	<item>"Петух"</item>
+    	<item>"школы Bell "</item>
+	</string-array>
+<string name="slient">"тихий"</string>
+<string name="min"> минут</string>
+<string name="sound">"​​Звук"</string>
+<string name="music">"музыки"</string>
+<string name="dialog_stop_title">"Стоп таймер? "</string>
+<string name="dialog_ok_title">"Да "</string>
+<string name="dialog_cancel_title">" Нет "</string>
+	
+</resources>

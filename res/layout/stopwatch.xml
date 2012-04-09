@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:handsrc="http://schemas.android.com/apk/res/com.jike.mobile.analogclock"
+    android:id="@+id/stopwatch_relativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/background_jk1"
+    
+     >
+     <!-- android:background="@drawable/background_jk1" -->
+
+    <LinearLayout
+        android:id="@+id/showtime_linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:id="@+id/stopwatch_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:shadowColor="#ff000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:text="@string/stopwatch_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/grey"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/stopwatch_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:shadowColor="#ff000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:text="00:00:000"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/red"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <ImageView android:id="@+id/analog_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/stopwatch_bk_jk1"
+        android:contentDescription="@string/alarm"
+         />
+    
+    
+       <!-- 
+	
+	<com.jike.mobile.analogclock.widget.BackgroundImageView
+        android:id="@+id/stopwatch_bk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        handsrc:myhandsrc="@drawable/dial_jk1" />
+ 
+    <com.jike.mobile.analogclock.widget.HandImageView
+        android:id="@+id/hour_hand_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        handsrc:myhandsrc="@drawable/hour_hand_jk1"
+        />--> 
+    <com.jike.mobile.analogclock.widget.HandImageView
+        android:id="@+id/sec_hand_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        handsrc:myhandsrc="@drawable/alarm_hand_pressed_jk1" 
+        />
+    <com.jike.mobile.analogclock.widget.HandImageView
+        android:id="@+id/min_hand_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        handsrc:myhandsrc="@drawable/min_hand_jk1"
+        />
+
+    
+    <ImageButton 
+        android:id="@+id/timer_stopwatch_button"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+		android:src="@drawable/set_timer_menu_icon"
+		android:background="@android:color/transparent"
+        android:contentDescription="@string/alarm"
+        />
+    <ImageButton 
+        android:id="@+id/start_stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+		android:src="@drawable/start_btn"
+		android:background="@android:color/transparent"
+        android:contentDescription="@string/alarm"
+        />
+    <!--  
+        
+         <Button
+        android:id="@+id/start_stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="22dp"
+        android:layout_marginLeft="22dp"
+        android:text="start_stop" />
+        -->
+         
+
+    <ImageButton
+        android:id="@+id/reset_button"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="22dp"
+        android:src="@drawable/selector_reset_btn"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/alarm"/>
+    <!--  
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="22dp"
+        android:layout_marginBottom="22dp"
+        android:text="reset" />
+    <ImageButton 
+        android:id="@+id/alarm_buttom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+		android:src="@drawable/alarm_on"
+		android:background="@android:color/transparent"
+        android:contentDescription="@string/alarm"
+        />
+		<ImageButton
+        android:id="@+id/lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/lock_off" 
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/alarm"/>
+    <ImageButton
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/setting_image_button" 
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/alarm"/>
+    -->
+
+</RelativeLayout>

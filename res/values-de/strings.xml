@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">"Wecker"</string>
+    <string name="alarm">"Alarm"</string>
+    <string name="alarm_at">"die Alarmglocken an:"</string>
+    <string name="setting">"Einstellungen"</string>
+    <string name="advanced">"Erweiterte"</string>
+    <string name="alert_sound">"​​Alert-Sound"</string>
+    <string name="never_repeat">"nie wiederholen"</string>
+    
+    <string name="default_label" msgid="5590025289805630372">"Wecker"</string>
+    <string name="set_alarm" msgid="9148359866152726808">"Wecker einstellen"</string>
+    <string name="alarm_vibrate" msgid="3476686921490362230">"Vibrieren"</string>
+    <string name="alarm_repeat" msgid="7242985466344233206">"Wiederholen"</string>
+    <string name="alert" msgid="6539852766423700221">"Klingelton"</string>
+    <string name="time" msgid="8067216534232296518">"Uhrzeit"</string>
+    <string name="alarm_alert_dismiss_text" msgid="4942914605480888820">"Ausschalten"</string>
+    <string name="alarm_alert_alert_silenced" msgid="7918075929961104202">"Der Wecker verstummte nach <xliff:g id="MINUTES">%d</xliff:g> Minuten"</string>
+    <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"Snooze-Funktion"</string>
+    <string name="alarm_alert_snooze_set" msgid="656470966696912087">"Snooze-Funktion aktiviert für <xliff:g id="MINUTES">%d</xliff:g> Minuten"</string>
+  <string-array name="alarm_set">
+    <item msgid="5163476010406761625">"Dieser Wecker klingelt in weniger als 1 Minute."</item>
+    <item msgid="7110525731259629055">"Dieser Wecker klingelt in <xliff:g id="DAYS">%1$s</xliff:g>."</item>
+    <item msgid="7003982794086186185">"Dieser Wecker klingelt in <xliff:g id="HOURS">%2$s</xliff:g>."</item>
+    <item msgid="7311021123230077742">"Dieser Wecker klingelt in <xliff:g id="DAYS">%1$s</xliff:g> und <xliff:g id="HOURS">%2$s</xliff:g>."</item>
+    <item msgid="8431715191823114872">"Dieser Wecker klingelt in <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
+    <item msgid="3244151088673185428">"Dieser Wecker klingelt in <xliff:g id="DAYS">%1$s</xliff:g> und <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
+    <item msgid="3663661342600168814">"Dieser Wecker klingelt in <xliff:g id="HOURS">%2$s</xliff:g> und <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
+    <item msgid="7779544127785487304">"Dieser Wecker klingelt in <xliff:g id="DAYS">%1$s</xliff:g>, <xliff:g id="HOURS">%2$s</xliff:g> und <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
+  </string-array>
+    <string name="day" msgid="7984755014526510295">"1 Tag"</string>
+    <string name="days" msgid="2070509222727852210">"<xliff:g id="DAYS">%s</xliff:g> Tage"</string>
+    <string name="hour" msgid="2546819039651509323">"1 Stunde"</string>
+    <string name="hours" msgid="2071487018566991613">"<xliff:g id="HOURS">%s</xliff:g> Stunden"</string>
+    <string name="minute" msgid="2486157997434653710">"1 Minute"</string>
+    <string name="minutes" msgid="6115838729146292526">"<xliff:g id="MINUTES">%s</xliff:g> Minuten"</string>
+    <string name="every_day" msgid="1058994798884544691">"Täglich"</string>
+    <string name="never" msgid="54104287800571769">"Nie"</string>
+    <string name="day_concat" msgid="971998564991636532">", "</string>
+    <string name="clock_instructions" msgid="3118560284915857690">"Wählen Sie die anzuzeigende Uhr aus."</string>
+    <string name="analog_gadget" msgid="1670505720837152766">"Analoguhr"</string>
+    <string name="settings" msgid="5849739030579520686">"Einstellungen"</string>
+    <string name="alarm_in_silent_mode_title" msgid="3892612644543516705">"Auch im Lautlosmodus"</string>
+    <string name="alarm_in_silent_mode_summary" msgid="6042500263899922832">"Wecker klingelt auch im Lautlosmodus"</string>
+    <string name="snooze_duration_title" msgid="1471249885139952670">"Snooze-Dauer"</string>
+    
+    <string name="alarm_volume_title" msgid="8506245173912428522">"Lautstärke für Wecker"</string>
+    <string name="alarm_volume_summary" msgid="8957440373896242438">"Lautstärke des Weckers einstellen"</string>
+    <string name="silent_alarm_summary" msgid="8605302849408279221">"Lautlos-Modus"</string>
+    <string name="alarm_notify_text" msgid="4146350965933990093">"Für Snooze-Funktion oder Beenden auswählen"</string>
+    <string name="alarm_notify_snooze_label" msgid="5404083762646377829">"<xliff:g id="LABEL">%s</xliff:g> (Snooze)"</string>
+    <string name="alarm_notify_snooze_text" msgid="8004830999152609519">"Wecker für <xliff:g id="TIME">%s</xliff:g> gestellt. Zum Abbrechen auswählen."</string>
+    
+    <!-- Setting title for changing the snooze duration. -->
+    <!-- Entries listed in the ListPreference when invoking the snooze duration
+         preference. -->
+    <string-array name="snooze_duration_entries">
+      	<item>5 Minuten</item>
+      	<item>10 Minuten</item>
+      	<item>15 Minuten</item>
+      	<item>20 Minuten</item>
+      	<item>25 Minuten</item>
+      	<item>30 Minuten</item>
+    	<item>nie</item>
+	</string-array>
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the snooze_duration_entries above. -->
+    <string-array name="snooze_duration_values">
+	      <item>5</item>
+	      <item>10</item>
+	      <item>15</item>
+	      <item>20</item>
+	      <item>25</item>
+	      <item>30</item>
+	   	 <item>0</item>
+	</string-array>
+
+    <string name="fade_in_length_title">Sound fade in</string>
+	<string name="fade_in_length_summary">set the alert fade in time</string>
+	<!-- Entries listed in the ListPreference when invoking the snooze duration
+         preference. -->
+    <string-array name="fade_in_length_entries">
+	      <item>1 Minuten</item>
+	      <item>2 Minuten</item>
+	      <item>5 Minuten</item>
+	      <item>10 Minuten</item>
+	      <item>15 Minuten</item>
+	      <item>30 Minuten</item>
+	    <item>nie</item>
+	</string-array>
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the snooze_duration_entries above. -->
+    <string-array name="fade_in_length_values">
+	      <item>1</item>
+	      <item>2</item>
+	      <item>5</item>
+	      <item>10</item>
+	      <item>15</item>
+	      <item>30</item>
+	    <item>0</item>
+	</string-array>
+	
+    
+
+    <!-- 0: nothing
+         1: days
+         2:      hours
+         3: days hours
+         4:            Minuten
+         5: days       Minuten
+         6:      hours Minuten
+         7: days hours Minuten
+    --><skip />
+
+    <!-- Alarm confirmation toast: Describes how long from now until
+         alarm fires -->
+    <string-array name="sound_type_values">
+      <item>0</item>
+      <item>1</item>
+	</string-array>
+<string name="sound_type_title">"Alarmtyp"</string>
+	<string-array name="sound_type_entries">
+      <item>"Musik"</item>
+      <item>Sound</item>
+	</string-array>
+<string name="sound_type_summay">"Select Sound-Typ: Klingelton oder Musik "</string>
+<string name="select_song">"Select Musik"</string>
+<string name="time_over_string">"Zeit ist vorbei! "</string>
+<string name="timer_title">Timer</string>
+<string name="stopwatch_title">"Stoppuhr "</string>
+<!-- "Ascending", "Birds", "Classic",
+			"Cuckoo", "Digital", "Electronic", "High Tone", "Mbira",
+			"Old Clock", "Rooster", "School Bell", -->
+<string-array name="sound_name_entries">
+      	<item>"aufsteigende"</item>
+      	<item>"Vögel"</item>
+      	<item>Classic</item>
+      	<item>"Kuckuck"</item>
+      	<item>"Digitale"</item>
+      	<item>"Elektronische"</item>
+    	<item>High Tone</item>
+    	<item>Mbira</item>
+    	<item>"Alte Uhr"</item>
+    	<item>Rooster</item>
+    	<item>School Bell</item>
+	</string-array>
+<string name="slient">"schweigen"</string>
+<string name="min"> Minuten</string>
+<string name="sound">Sound</string>
+<string name="music">"Musik"</string>
+<string name="dialog_stop_title">"Anhalten?"</string>
+<string name="dialog_ok_title">" Ja "</string>
+<string name="dialog_cancel_title">"Nein "</string>
+	
+</resources>

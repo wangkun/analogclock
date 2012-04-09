@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Horloge</string>
+    <string name="alarm">alarme</string>
+    <string name="alarm_at">"régler l'alarme à l'adresse: "</string>
+    <string name="setting">Paramètres</string>
+    <string name="settings">Paramètres</string>
+    <string name="skin_sound">Skin&amp;Sound</string>
+    <string name="advanced">avancé</string>
+    <string name="alarm_repeat">Répéter</string>
+    <string name="alert_sound">alerte sonore</string>
+    <string name="alarm_vibrate">Vibreur</string>
+    <string name="default_label">Alarme</string>
+    <string name="never_repeat">Jamais</string>
+    
+    <!-- Setting title for changing the snooze duration. -->
+    <string name="snooze_duration_title">Répéter après</string>
+    <!-- Entries listed in the ListPreference when invoking the snooze duration
+         preference. -->
+    <string-array name="snooze_duration_entries">
+      	<item>5 minutes</item>
+      	<item>10 minutes</item>
+      	<item>15 minutes</item>
+      	<item>20 minutes</item>
+      	<item>25 minutes</item>
+      	<item>30 minutes</item>
+    	<item>Jamais</item>
+	</string-array>
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the snooze_duration_entries above. -->
+    <string-array name="snooze_duration_values">
+	      <item>5</item>
+	      <item>10</item>
+	      <item>15</item>
+	      <item>20</item>
+	      <item>25</item>
+	      <item>30</item>
+	   	 <item>0</item>
+	</string-array>
+
+    <string name="fade_in_length_title">Son ouverture en fondu</string>
+	<string name="fade_in_length_summary">"définir le fondu d'alerte en temps"</string>
+	<!-- Entries listed in the ListPreference when invoking the snooze duration
+         preference. -->
+    <string-array name="fade_in_length_entries">
+	      <item>1 minutes</item>
+	      <item>2 minutes</item>
+	      <item>5 minutes</item>
+	      <item>10 minutes</item>
+	      <item>15 minutes</item>
+	      <item>30 minutes</item>
+	    <item>Jamais</item>
+	</string-array>
+    <!-- Values that are retrieved from the ListPreference. These must match
+         the snooze_duration_entries above. -->
+    <string-array name="fade_in_length_values">
+	      <item>1</item>
+	      <item>2</item>
+	      <item>5</item>
+	      <item>10</item>
+	      <item>15</item>
+	      <item>30</item>
+	    <item>0</item>
+	</string-array>
+	
+    
+    <!-- Setting labels on Set alarm screen: Set time  -->
+    <string name="time">Heure</string>
+
+    <!-- Button labels on the alarm dialog: Dismiss -->
+    <string name="alarm_alert_dismiss_text">Quitter</string>
+
+    <!-- Alarm Alert screen: this message is shown after an alarm rung
+         unattended for a number of minutes.  It tells the user that
+         the alarm has been silenced.-->
+    <string name="alarm_alert_alert_silenced">Alarme interrompue après <xliff:g id="minutes">%d</xliff:g> minutes</string>
+
+    <!-- Button labels on the alarm dialog: Snooze -->
+    <string name="alarm_alert_snooze_text">Répéter</string>
+
+    <!-- Toast that appears after Alarm is snoozed from the Alarm
+         dialog. Says the alarm will snooze for xxx minutes.  -->
+    <string name="alarm_alert_snooze_set">"Répétition dans <xliff:g id="minutes">%d</xliff:g> minutes.</string>
+
+    <!-- 0: nothing
+         1: days
+         2:      hours
+         3: days hours
+         4:            minutes
+         5: days       minutes
+         6:      hours minutes
+         7: days hours minutes
+    --><skip />
+
+    <!-- Alarm confirmation toast: Describes how long from now until
+         alarm fires -->
+<string-array name="alarm_set">
+    <item>"Prochaine alarme dans moins d\'une minute."</item>
+    <item>"Prochaine alarme dans <xliff:g id="DAYS">%1$s</xliff:g>."</item>
+    <item>"Prochaine alarme dans <xliff:g id="HOURS">%2$s</xliff:g>."</item>
+    <item>"Prochaine alarme dans <xliff:g id="DAYS">%1$s</xliff:g> et <xliff:g id="HOURS">%2$s</xliff:g>."</item>
+    <item>"Prochaine alarme dans <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
+    <item>"Prochaine alarme dans <xliff:g id="DAYS">%1$s</xliff:g> et <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
+    <item>"Prochaine alarme dans <xliff:g id="HOURS">%2$s</xliff:g> et <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
+    <item>"Prochaine alarme dans <xliff:g id="DAYS">%1$s</xliff:g>, <xliff:g id="HOURS">%2$s</xliff:g> et <xliff:g id="MINUTES">%3$s</xliff:g>."</item>
+  </string-array>
+    <string name="day" msgid="7984755014526510295">"1 jour"</string>
+    <string name="days" msgid="2070509222727852210">"<xliff:g id="DAYS">%s</xliff:g> jours"</string>
+    <string name="hour" msgid="2546819039651509323">"1 heure"</string>
+    <string name="hours" msgid="2071487018566991613">"<xliff:g id="HOURS">%s</xliff:g> heures"</string>
+    <string name="minute" msgid="2486157997434653710">"1 minute"</string>
+    <string name="minutes" msgid="6115838729146292526">"<xliff:g id="MINUTES">%s</xliff:g> minutes"</string>
+    <string name="every_day" msgid="1058994798884544691">"Tous les jours"</string>
+    <string name="never" msgid="54104287800571769">"Jamais"</string>
+    <string name="day_concat" msgid="971998564991636532">", "</string>
+    
+    <string name="alarm_volume_title" msgid="8506245173912428522">"Volume"</string>
+    <string name="alarm_volume_summary" msgid="8957440373896242438">"Définir le volume des alarmes"</string>
+    <string name="silent_alarm_summary" msgid="8605302849408279221">"Silencieuse"</string>
+    <string name="alarm_notify_text" msgid="4146350965933990093">"Choisissez si vous souhaitez répéter ou désactiver cette alarme."</string>
+    <string name="alarm_notify_snooze_label" msgid="5404083762646377829">"<xliff:g id="LABEL">%s</xliff:g> (répétition)"</string>
+    <string name="alarm_notify_snooze_text" msgid="8004830999152609519">"Prochaine alarme dans <xliff:g id="TIME">%s</xliff:g>. Sélectionnez l\'option appropriée pour annuler."</string>
+    
+    <string name="alarm_ampm">Alarm at am/pm</string>
+    <string-array name="sound_type_values">
+      <item>0</item>
+      <item>1</item>
+	</string-array>
+<string name="sound_type_title">"Type d'alarme"</string>
+	<string-array name="sound_type_entries">
+      <item>Musique</item>
+      <item>sonore</item>
+	</string-array>
+<string name="sound_type_summay">Sélectionner le type de son: sonneries ou de musique</string>
+<string name="select_song">Sélectionnez la musique </string>
+<string name="time_over_string">Le temps est fini!</string>
+<string name="timer_title">minuterie</string>
+<string name="stopwatch_title">chronomètre</string>
+<!-- "Ascending", "Birds", "Classic",
+			"Cuckoo", "Digital", "Electronic", "High Tone", "Mbira",
+			"Old Clock", "Rooster", "School Bell", -->
+<string-array name="sound_name_entries">
+      	<item>incrémenter</item>
+      	<item>oiseaux</item>
+      	<item>classique</item>
+      	<item>coucou</item>
+      	<item>numérique</item>
+      	<item>électronique </item>
+    	<item>High Tone</item>
+    	<item>Mbira</item>
+    	<item>Old Clock</item>
+    	<item>Coq</item>
+    	<item>School Bell</item>
+	</string-array>
+<string name="slient">slient</string>
+<string name="min"> minutes</string>
+<string name="sound">​​sonore</string>
+<string name="music">Musique</string>
+<string name="dialog_stop_title">" arrêter l'horloge? "</string>
+<string name="dialog_ok_title"> Oui </string>
+<string name="dialog_cancel_title"> Non </string>
+	
+</resources>
