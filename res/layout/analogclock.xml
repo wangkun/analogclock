@@ -49,6 +49,7 @@
         android:src="@drawable/dial_jk1"
         android:contentDescription="@string/alarm"
          />
+	
          <!-- 
 	<com.jike.mobile.analogclock.widget.BackgroundImageView
         android:id="@+id/analog_clock"
@@ -91,6 +92,14 @@
         android:layout_centerVertical="true"
         handsrc:myhandsrc="@drawable/sec_hand_jk1" 
         />
+    <ImageView android:id="@+id/center_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/center_point_jk1"
+        android:contentDescription="@string/alarm"
+         />
     <ImageButton
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -169,25 +178,23 @@
         </ImageButton>
         	<ImageButton
 		        android:id="@+id/lock"
-		        android:layout_width="72dp"
-		        android:layout_height="72dp"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
 		        android:layout_alignParentBottom="true"
 		        android:layout_alignParentLeft="true"
-		        android:layout_marginLeft="24dp"
 		        android:layout_marginBottom="24dp"
 		        android:src="@drawable/lock_off" 
-		        android:background="@android:color/transparent"
+		        android:background="@drawable/button_bk"
 		        android:contentDescription="@string/alarm"/>
 		    <ImageButton
 		        android:id="@+id/setting"
-		        android:layout_width="72dp"
-		        android:layout_height="72dp"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
 		        android:layout_alignParentBottom="true"
 		        android:layout_alignParentRight="true"
-		        android:layout_marginRight="24dp"
 		        android:layout_marginBottom="24dp"
 		        android:src="@drawable/setting_image_button" 
-		        android:background="@android:color/transparent"
+		        android:background="@drawable/button_bk_re"
 		        android:contentDescription="@string/alarm"/>
             
         

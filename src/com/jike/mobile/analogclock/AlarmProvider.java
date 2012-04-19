@@ -1,7 +1,6 @@
 
 package com.jike.mobile.analogclock;
 
-
 import com.jike.mobile.analogclock.widget.Log;
 
 import android.content.ContentProvider;
@@ -16,19 +15,18 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 import android.text.TextUtils;
+
 /**
- * 
- * AlarmProvider 
- *       ݹ   
- *
+ * AlarmProvider ݹ
  */
 public class AlarmProvider extends ContentProvider {
     private SQLiteOpenHelper mOpenHelper;
 
     private static final int ALARMS = 1;
+
     private static final int ALARMS_ID = 2;
-    private static final UriMatcher sURLMatcher = new UriMatcher(
-            UriMatcher.NO_MATCH);
+
+    private static final UriMatcher sURLMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
     static {
         sURLMatcher.addURI("com.jike.mobile.analogclock", "alarm", ALARMS);
@@ -37,47 +35,36 @@ public class AlarmProvider extends ContentProvider {
 
     private static class DatabaseHelper extends SQLiteOpenHelper {
         private static final String DATABASE_NAME = "jikeanalogclock.db";
+
         private static final int DATABASE_VERSION = 1;
 
         public DatabaseHelper(Context context) {
             super(context, DATABASE_NAME, null, DATABASE_VERSION);
         }
- 
+
         @Override
         public void onCreate(SQLiteDatabase db) {
-            db.execSQL("CREATE TABLE alarms (" +
-                       "_id INTEGER PRIMARY KEY," +
-                       "hour INTEGER, " +
-                       "minutes INTEGER, " +
-                       "daysofweek INTEGER, " +
-                       "alarmtime INTEGER, " +
-                       "enabled INTEGER, " +
-                       "vibrate INTEGER, " +
-                       "message TEXT, " +
-                       "snoozeInterval INTEGER, " +
-                       "fadeInLength INTEGER, " + 
-                       "volume INTEGER, " +
-                       "soundId INTEGER, " +
-                       "isOnSnooze INTEGER, " +
-                       "soundType INTEGER, " +
-                       "musicUri TEXT, " +
-                       "title TEXT, " +
-                       "alert TEXT);");
+            db.execSQL("CREATE TABLE alarms (" + "_id INTEGER PRIMARY KEY," + "hour INTEGER, "
+                    + "minutes INTEGER, " + "daysofweek INTEGER, " + "alarmtime INTEGER, "
+                    + "enabled INTEGER, " + "vibrate INTEGER, " + "message TEXT, "
+                    + "snoozeInterval INTEGER, " + "fadeInLength INTEGER, " + "volume INTEGER, "
+                    + "soundId INTEGER, " + "isOnSnooze INTEGER, " + "soundType INTEGER, "
+                    + "musicUri TEXT, " + "title TEXT, " + "alert TEXT);");
 
             // insert default alarms
-//            String insertMe = "INSERT INTO alarms " +
-//                    "(hour, minutes, daysofweek, alarmtime, enabled, vibrate, message, alert) " +
-//                    "VALUES ";
-//            db.execSQL(insertMe + "(8, 30, 31, 0, 0, 1, '', '');");
-//            db.execSQL(insertMe + "(9, 00, 96, 0, 0, 1, '', '');");
+            // String insertMe = "INSERT INTO alarms " +
+            // "(hour, minutes, daysofweek, alarmtime, enabled, vibrate, message, alert) "
+            // +
+            // "VALUES ";
+            // db.execSQL(insertMe + "(8, 30, 31, 0, 0, 1, '', '');");
+            // db.execSQL(insertMe + "(9, 00, 96, 0, 0, 1, '', '');");
         }
 
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int currentVersion) {
-            if (Log.LOGV) Log.v(
-                    "Upgrading alarms database from version " +
-                    oldVersion + " to " + currentVersion +
-                    ", which will destroy all old data");
+            if (Log.LOGV)
+                Log.v("Upgrading alarms database from version " + oldVersion + " to "
+                        + currentVersion + ", which will destroy all old data");
             db.execSQL("DROP TABLE IF EXISTS alarms");
             onCreate(db);
         }
@@ -93,8 +80,8 @@ public class AlarmProvider extends ContentProvider {
     }
 
     @Override
-    public Cursor query(Uri url, String[] projectionIn, String selection,
-            String[] selectionArgs, String sort) {
+    public Cursor query(Uri url, String[] projectionIn, String selection, String[] selectionArgs,
+            String sort) {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 
         // Generate the body of the query
@@ -113,11 +100,11 @@ public class AlarmProvider extends ContentProvider {
         }
 
         SQLiteDatabase db = mOpenHelper.getReadableDatabase();
-        Cursor ret = qb.query(db, projectionIn, selection, selectionArgs,
-                              null, null, sort);
+        Cursor ret = qb.query(db, projectionIn, selection, selectionArgs, null, null, sort);
 
         if (ret == null) {
-            if (Log.LOGV) Log.v("Alarms.query: failed");
+            if (Log.LOGV)
+                Log.v("Alarms.query: failed");
         } else {
             ret.setNotificationUri(getContext().getContentResolver(), url);
         }
@@ -152,11 +139,11 @@ public class AlarmProvider extends ContentProvider {
                 break;
             }
             default: {
-                throw new UnsupportedOperationException(
-                        "Cannot update URL: " + url);
+                throw new UnsupportedOperationException("Cannot update URL: " + url);
             }
         }
-        if (Log.LOGV) Log.v("*** notifyChange() rowId: " + rowId + " url " + url);
+        if (Log.LOGV)
+            Log.v("*** notifyChange() rowId: " + rowId + " url " + url);
         getContext().getContentResolver().notifyChange(url, null);
         return count;
     }
@@ -174,7 +161,8 @@ public class AlarmProvider extends ContentProvider {
         if (rowId < 0) {
             throw new SQLException("Failed to insert row into " + url);
         }
-        if (Log.LOGV) Log.v("Added alarm rowId = " + rowId);
+        if (Log.LOGV)
+            Log.v("Added alarm rowId = " + rowId);
 
         Uri newUrl = ContentUris.withAppendedId(Alarm.Columns.CONTENT_URI, rowId);
         getContext().getContentResolver().notifyChange(newUrl, null);
@@ -184,14 +172,14 @@ public class AlarmProvider extends ContentProvider {
     public int delete(Uri url, String where, String[] whereArgs) {
         SQLiteDatabase db = mOpenHelper.getWritableDatabase();
         int count;
-//        long rowId = 0;
+        // long rowId = 0;
         switch (sURLMatcher.match(url)) {
             case ALARMS:
                 count = db.delete("alarms", where, whereArgs);
                 break;
             case ALARMS_ID:
                 String segment = url.getPathSegments().get(1);
-//                rowId = Long.parseLong(segment);
+                // rowId = Long.parseLong(segment);
                 if (TextUtils.isEmpty(where)) {
                     where = "_id=" + segment;
                 } else {

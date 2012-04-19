@@ -1,3 +1,4 @@
+
 package com.jike.mobile.analogclock;
 
 import com.jike.mobile.analogclock.widget.Log;
@@ -6,7 +7,7 @@ import android.content.Context;
 import android.os.PowerManager;
 
 /**
- *    wakelock up CPU
+ * wakelock up CPU
  */
 class AlarmAlertWakeLock {
 
@@ -18,13 +19,10 @@ class AlarmAlertWakeLock {
             return;
         }
 
-        PowerManager pm =
-                (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+        PowerManager pm = (PowerManager)context.getSystemService(Context.POWER_SERVICE);
 
-        sCpuWakeLock = pm.newWakeLock(
-                PowerManager.PARTIAL_WAKE_LOCK |
-                PowerManager.ACQUIRE_CAUSES_WAKEUP |
-                PowerManager.ON_AFTER_RELEASE, Log.LOGTAG);
+        sCpuWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK
+                | PowerManager.ACQUIRE_CAUSES_WAKEUP | PowerManager.ON_AFTER_RELEASE, Log.LOGTAG);
         sCpuWakeLock.acquire();
     }
 

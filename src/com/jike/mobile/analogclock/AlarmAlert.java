@@ -20,25 +20,24 @@ import android.view.KeyEvent;
 public class AlarmAlert extends AlarmAlertFullScreen {
 
     private int mKeyguardRetryCount;
+
     private final int MAX_KEYGUARD_CHECKS = 5;
 
     private final Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            handleScreenOff((KeyguardManager) msg.obj);
+            handleScreenOff((KeyguardManager)msg.obj);
         }
     };
 
-    private final BroadcastReceiver mScreenOffReceiver =
-            new BroadcastReceiver() {
-                @Override
-                public void onReceive(Context context, Intent intent) {
-                    KeyguardManager km =
-                            (KeyguardManager) context.getSystemService(
-                            Context.KEYGUARD_SERVICE);
-                    handleScreenOff(km);
-                }
-            };
+    private final BroadcastReceiver mScreenOffReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            KeyguardManager km = (KeyguardManager)context
+                    .getSystemService(Context.KEYGUARD_SERVICE);
+            handleScreenOff(km);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle icicle) {
@@ -46,8 +45,7 @@ public class AlarmAlert extends AlarmAlertFullScreen {
 
         // Listen for the screen turning off so that when the screen comes back
         // on, the user does not need to unlock the phone to dismiss the alarm.
-        registerReceiver(mScreenOffReceiver,
-                new IntentFilter(Intent.ACTION_SCREEN_OFF));
+        registerReceiver(mScreenOffReceiver, new IntentFilter(Intent.ACTION_SCREEN_OFF));
     }
 
     @Override
@@ -59,25 +57,26 @@ public class AlarmAlert extends AlarmAlertFullScreen {
     }
 
     @Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		// TODO Auto-generated method stub
-    	Log.v("AlarmAlert onKeyDown");
-		return true;
-		
-	}
-    
-	@Override
-	public boolean onKeyUp(int keyCode, KeyEvent event) {
-		// TODO Auto-generated method stub
-		Log.v("AlarmAlert onKeyUp");
-		return true;
-	}
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        // TODO Auto-generated method stub
+        Log.v("AlarmAlert onKeyDown");
+        return true;
+
+    }
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        // TODO Auto-generated method stub
+        Log.v("AlarmAlert onKeyUp");
+        return true;
+    }
+
     @Override
     public void onBackPressed() {
-    	Log.v("AlarmAlert onBackPressed");
-//        finish();
+        Log.v("AlarmAlert onBackPressed");
+        // finish();
     }
-    
+
     private boolean checkRetryCount() {
         if (mKeyguardRetryCount++ >= MAX_KEYGUARD_CHECKS) {
             Log.e("Tried to read keyguard status too many times, bailing...");

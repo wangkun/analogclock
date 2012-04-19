@@ -22,7 +22,6 @@ import java.util.Calendar;
 import com.jike.mobile.analogclock.AlarmsMethod;
 import com.jike.mobile.analogclock.R;
 
-
 /**
  */
 public class DigitalClock extends LinearLayout {
@@ -30,37 +29,44 @@ public class DigitalClock extends LinearLayout {
     private final static String M12 = "h:mm";
 
     private Calendar mCalendar;
+
     private String mFormat;
+
     private TextView mTimeDisplay;
+
     private AmPm mAmPm;
+
     private ContentObserver mFormatChangeObserver;
+
     private boolean mLive = true;
+
     private boolean mAttached;
 
     /* called by system on minute ticks */
     private final Handler mHandler = new Handler();
+
     private final BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                if (mLive && intent.getAction().equals(
-                            Intent.ACTION_TIMEZONE_CHANGED)) {
-                    mCalendar = Calendar.getInstance();
-                }
-                // Post a runnable to avoid blocking the broadcast.
-                mHandler.post(new Runnable() {
-                        public void run() {
-                            updateTime();
-                        }
-                });
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (mLive && intent.getAction().equals(Intent.ACTION_TIMEZONE_CHANGED)) {
+                mCalendar = Calendar.getInstance();
             }
-        };
+            // Post a runnable to avoid blocking the broadcast.
+            mHandler.post(new Runnable() {
+                public void run() {
+                    updateTime();
+                }
+            });
+        }
+    };
 
     static class AmPm {
         private TextView mAmPm;
+
         private String mAmString, mPmString;
 
         AmPm(View parent) {
-            mAmPm = (TextView) parent.findViewById(R.id.am_pm);
+            mAmPm = (TextView)parent.findViewById(R.id.am_pm);
 
             String[] ampm = new DateFormatSymbols().getAmPmStrings();
             mAmString = ampm[0];
@@ -80,6 +86,7 @@ public class DigitalClock extends LinearLayout {
         public FormatChangeObserver() {
             super(new Handler());
         }
+
         @Override
         public void onChange(boolean selfChange) {
             setDateFormat();
@@ -99,9 +106,8 @@ public class DigitalClock extends LinearLayout {
     protected void onFinishInflate() {
         super.onFinishInflate();
 
-        Typeface tf = Typeface.createFromAsset(getContext().getAssets(),
-                "fonts/Clockopia.ttf");
-        mTimeDisplay = (TextView) findViewById(R.id.timeDisplay);
+        Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/Clockopia.ttf");
+        mTimeDisplay = (TextView)findViewById(R.id.timeDisplay);
         mTimeDisplay.setTypeface(tf);
         mAmPm = new AmPm(this);
         mCalendar = Calendar.getInstance();
@@ -113,9 +119,11 @@ public class DigitalClock extends LinearLayout {
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
 
-        if (Log.LOGV) Log.v("onAttachedToWindow " + this);
+        if (Log.LOGV)
+            Log.v("onAttachedToWindow " + this);
 
-        if (mAttached) return;
+        if (mAttached)
+            return;
         mAttached = true;
 
         if (mLive) {
@@ -129,8 +137,8 @@ public class DigitalClock extends LinearLayout {
 
         /* monitor 12/24-hour display preference */
         mFormatChangeObserver = new FormatChangeObserver();
-        getContext().getContentResolver().registerContentObserver(
-                Settings.System.CONTENT_URI, true, mFormatChangeObserver);
+        getContext().getContentResolver().registerContentObserver(Settings.System.CONTENT_URI,
+                true, mFormatChangeObserver);
 
         updateTime();
     }
@@ -139,16 +147,15 @@ public class DigitalClock extends LinearLayout {
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
 
-        if (!mAttached) return;
+        if (!mAttached)
+            return;
         mAttached = false;
 
         if (mLive) {
             getContext().unregisterReceiver(mIntentReceiver);
         }
-        getContext().getContentResolver().unregisterContentObserver(
-                mFormatChangeObserver);
+        getContext().getContentResolver().unregisterContentObserver(mFormatChangeObserver);
     }
-
 
     void updateTime(Calendar c) {
         mCalendar = c;
