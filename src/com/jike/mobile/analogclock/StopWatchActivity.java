@@ -17,6 +17,7 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -47,9 +48,9 @@ public class StopWatchActivity extends Activity {
      */
     RelativeLayout mAllRelativeLayout;
 
-    ImageButton mStartStopButton;
+    Button mStartStopButton;
 
-    ImageButton mResetButton;
+    Button mResetButton;
 
     ImageButton Timer_StopwatchButton;
 
@@ -142,8 +143,8 @@ public class StopWatchActivity extends Activity {
 
         mAlarmTimeTextView = (TextView)findViewById(R.id.stopwatch_time_text);
         mTitleTextView = (TextView)findViewById(R.id.stopwatch_title);
-        mStartStopButton = (ImageButton)findViewById(R.id.start_stop_button);
-        mResetButton = (ImageButton)findViewById(R.id.reset_button);
+        mStartStopButton = (Button)findViewById(R.id.start_stop_button);
+        mResetButton = (Button)findViewById(R.id.reset_button);
         mSecHandImageView = (HandImageView)findViewById(R.id.sec_hand_view);
         mMinHandImageView = (HandImageView)findViewById(R.id.min_hand_view);
         Timer_StopwatchButton = (ImageButton)findViewById(R.id.timer_stopwatch_button);
@@ -163,7 +164,8 @@ public class StopWatchActivity extends Activity {
                     if (isRunning) {
                         isRunning = !isRunning;
                         mSecHandReverseRunHandler.removeCallbacks(mSecHandReverseRunnable);
-                        mStartStopButton.setImageResource(R.drawable.start_btn);
+//                        mStartStopButton.setImageResource(R.drawable.start_btn);
+                        mStartStopButton.setText(R.string.start);//??TODO:
                         mResetButton.setClickable(true);
 
                         mTimerAlarm.time = 0L;
@@ -183,7 +185,8 @@ public class StopWatchActivity extends Activity {
                         if (isZeroTime) {
                             isZeroTime = false;
                         }
-                        mStartStopButton.setImageResource(R.drawable.stop_btn);
+//                        mStartStopButton.setImageResource(R.drawable.stop_btn);
+                        mStartStopButton.setText(R.string.pause);//???
                         mSecHandReverseRunHandler.post(mSecHandReverseRunnable);
                         mResetButton.setClickable(false);
                     }
@@ -192,7 +195,9 @@ public class StopWatchActivity extends Activity {
                 if (isRunning) {
                     isRunning = !isRunning;
                     mSecHandRunHandler.removeCallbacks(mSecHandRunnable);
-                    mStartStopButton.setImageResource(R.drawable.start_btn);
+//                    mStartStopButton.setImageResource(R.drawable.start_btn);
+//                    TODO??
+                    mStartStopButton.setText("Start");
                     mResetButton.setClickable(true);
                 } else {
                     isRunning = !isRunning;
@@ -204,7 +209,8 @@ public class StopWatchActivity extends Activity {
                         secAngle = 0;
                     }
                     mSecHandRunHandler.post(mSecHandRunnable);
-                    mStartStopButton.setImageResource(R.drawable.stop_btn);
+//                    mStartStopButton.setImageResource(R.drawable.stop_btn);
+                    mStartStopButton.setText("Pause");//??TODO:
                     mResetButton.setClickable(false);
                 }
             }
@@ -239,14 +245,14 @@ public class StopWatchActivity extends Activity {
                 switch (timer_stopwatch) {
                     case TIMER:
                         timer_stopwatch = STOPWATCH;
-                        Timer_StopwatchButton.setImageResource(R.drawable.stopwatch_menu_icon);
+                        Timer_StopwatchButton.setImageResource(R.drawable.stopwatch_icon);
                         mMinHandImageView.setOnTouchListener(mMinHandTouchListener);
                         mTitleTextView.setText(getString(R.string.stopwatch_title));
                         break;
 
                     case STOPWATCH:
                         timer_stopwatch = TIMER;
-                        Timer_StopwatchButton.setImageResource(R.drawable.timer_menu_icon);
+                        Timer_StopwatchButton.setImageResource(R.drawable.timer_icon);
                         mMinHandImageView.setOnTouchListener(null);
                         mTitleTextView.setText(getString(R.string.timer_title));
                         break;
@@ -317,12 +323,12 @@ public class StopWatchActivity extends Activity {
         // TODO Auto-generated method stub
         switch (timer_stopwatch) {
             case TIMER:
-                Timer_StopwatchButton.setImageResource(R.drawable.stopwatch_menu_icon);
+                Timer_StopwatchButton.setImageResource(R.drawable.stopwatch_icon);
                 mMinHandImageView.setOnTouchListener(mMinHandTouchListener);
                 mTitleTextView.setText(R.string.timer_title);
                 break;
             case STOPWATCH:
-                Timer_StopwatchButton.setImageResource(R.drawable.timer_menu_icon);
+                Timer_StopwatchButton.setImageResource(R.drawable.timer_icon);
                 mTitleTextView.setText(R.string.stopwatch_title);
                 mMinHandImageView.setOnTouchListener(null);
                 break;
@@ -393,7 +399,8 @@ public class StopWatchActivity extends Activity {
                 updateTimerText(0, 0, 0);
                 resetHand();
                 isRunning = false;
-                mStartStopButton.setImageResource(R.drawable.start_btn);
+//                mStartStopButton.setImageResource(R.drawable.start_btn);
+                mStartStopButton.setText(R.string.start);//??TODO:
                 mResetButton.setClickable(true);
                 return;
             }

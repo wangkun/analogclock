@@ -92,27 +92,25 @@
         android:layout_centerVertical="true"
         handsrc:myhandsrc="@drawable/min_hand_jk1"
         />
+    <ImageView android:id="@+id/center_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/center_point_jk1"
+        android:contentDescription="@string/alarm"
+         />
 
     
     <ImageButton 
         android:id="@+id/timer_stopwatch_button"
         android:layout_width="72dp"
         android:layout_height="72dp"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-		android:src="@drawable/set_timer_menu_icon"
-		android:background="@android:color/transparent"
-        android:contentDescription="@string/alarm"
-        />
-    <ImageButton 
-        android:id="@+id/start_stop_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-		android:src="@drawable/start_btn"
+		android:src="@drawable/timer_icon"
 		android:background="@android:color/transparent"
         android:contentDescription="@string/alarm"
         />
@@ -128,19 +126,6 @@
         android:layout_marginLeft="22dp"
         android:text="start_stop" />
         -->
-         
-
-    <ImageButton
-        android:id="@+id/reset_button"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="22dp"
-        android:layout_marginBottom="22dp"
-        android:src="@drawable/selector_reset_btn"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/alarm"/>
     <!--  
     <Button
         android:id="@+id/reset_button"
@@ -186,5 +171,41 @@
         android:background="@android:color/transparent"
         android:contentDescription="@string/alarm"/>
     -->
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/reset_bt_bk"
+        android:shadowColor="#ff000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="@string/reset"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#209bd8"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/start_stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/startstop_bt_bk_jk1"
+        android:shadowColor="#ff000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="Start"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#209bd8"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

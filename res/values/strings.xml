@@ -184,5 +184,8 @@
 <string name="dialog_stop_title"> Stop timer? </string>
 <string name="dialog_ok_title"> Yes </string>
 <string name="dialog_cancel_title"> No </string>
+<string name="start">Start</string>
+<string name="pause">Pause</string>
+<string name="reset">Reset</string>
 	
 </resources>
