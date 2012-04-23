@@ -153,5 +153,8 @@
 <string name="dialog_stop_title">"Anhalten?"</string>
 <string name="dialog_ok_title">" Ja "</string>
 <string name="dialog_cancel_title">"Nein "</string>
+<string name="start">starten</string>
+<string name="pause">Pause</string>
+<string name="reset">Zurücksetzen</string>
 	
 </resources>

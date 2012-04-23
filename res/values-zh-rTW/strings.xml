@@ -184,4 +184,7 @@
 	<string name="dialog_stop_title">停止計時？</string>
 <string name="dialog_ok_title"> 是 </string>
 <string name="dialog_cancel_title"> 否 </string>
+<string name="start">開始</string>
+<string name="pause">暫停</string>
+<string name="reset">重置</string>
 </resources>

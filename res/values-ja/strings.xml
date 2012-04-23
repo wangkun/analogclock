@@ -153,4 +153,7 @@
 	<string name="dialog_stop_title">は、クロックを停止する？</string>
 <string name="dialog_ok_title"> OK </string>
 <string name="dialog_cancel_title"> はありません </string>
+<string name="start">スタート</string>
+<string name="pause">一時停止</string>
+<string name="reset">リセット</string>
 </resources>

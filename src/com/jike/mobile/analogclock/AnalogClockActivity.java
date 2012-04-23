@@ -406,6 +406,18 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
         } else {
             mLockButton.setVisibility(View.INVISIBLE);
         }
+//        初始化stopwatchButton
+        switch (JikeAnalogClockPreference.firstLauched) {
+            case 1:
+                mStopWatchButton.setImageResource(R.drawable.stopwatch_icon);
+                break;
+            case 2:
+                mStopWatchButton.setImageResource(R.drawable.timer_icon);
+                break;
+            default:
+                mStopWatchButton.setImageResource(R.drawable.timer_icon);
+                break;
+        }
     }
 
     /**

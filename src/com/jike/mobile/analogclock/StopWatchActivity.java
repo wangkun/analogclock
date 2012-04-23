@@ -1,6 +1,7 @@
 
 package com.jike.mobile.analogclock;
 
+import java.security.interfaces.RSAKey;
 import java.util.Calendar;
 
 import android.app.Activity;
@@ -197,7 +198,7 @@ public class StopWatchActivity extends Activity {
                     mSecHandRunHandler.removeCallbacks(mSecHandRunnable);
 //                    mStartStopButton.setImageResource(R.drawable.start_btn);
 //                    TODO??
-                    mStartStopButton.setText("Start");
+                    mStartStopButton.setText(R.string.start);
                     mResetButton.setClickable(true);
                 } else {
                     isRunning = !isRunning;
@@ -210,7 +211,7 @@ public class StopWatchActivity extends Activity {
                     }
                     mSecHandRunHandler.post(mSecHandRunnable);
 //                    mStartStopButton.setImageResource(R.drawable.stop_btn);
-                    mStartStopButton.setText("Pause");//??TODO:
+                    mStartStopButton.setText(R.string.pause);//??TODO:
                     mResetButton.setClickable(false);
                 }
             }
@@ -369,7 +370,7 @@ public class StopWatchActivity extends Activity {
             if (lastSecAngle != secAngle) {
                 mSecHandImageView.RotateHanderWithAngle(secAngle);
                 lastSecAngle = secAngle;
-                Log.v("jike " + secAngle);
+//                Log.v("jike " + secAngle);
                 minAngle = countMin * 6;
                 if (lastMinAngle != minAngle) {
                     // mHourHandImageView.PostRotateHanderWithAngle(hourAngle);
@@ -416,7 +417,7 @@ public class StopWatchActivity extends Activity {
             if (lastSecAngle != secAngle) {
                 mSecHandImageView.RotateHanderWithAngle(secAngle);
                 lastSecAngle = secAngle;
-                Log.v("jike " + secAngle);
+//                Log.v("jike " + secAngle);
                 minAngle = countMin * 6;
                 if (lastMinAngle != minAngle) {
                     // mHourHandImageView.PostRotateHanderWithAngle(hourAngle);

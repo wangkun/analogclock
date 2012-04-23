@@ -149,5 +149,7 @@
 <string name="dialog_stop_title">"Стоп таймер? "</string>
 <string name="dialog_ok_title">"Да "</string>
 <string name="dialog_cancel_title">" Нет "</string>
-	
+<string name="start">начало</string>
+<string name="pause">пауза</string>
+<string name="reset">сброс</string>	
 </resources>

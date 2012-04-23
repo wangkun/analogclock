@@ -161,5 +161,7 @@
 <string name="dialog_stop_title">" arrêter l'horloge? "</string>
 <string name="dialog_ok_title"> Oui </string>
 <string name="dialog_cancel_title"> Non </string>
-	
+<string name="start">commencer</string>
+<string name="pause">pause</string>
+<string name="reset">remettre</string>	
 </resources>

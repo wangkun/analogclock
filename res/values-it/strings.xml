@@ -140,5 +140,7 @@
 <string name="dialog_stop_title">" Stop conteggio? "</string>
 <string name="dialog_ok_title">" Sì "</string>
 <string name="dialog_cancel_title">" No "</string>
-	
+<string name="start">inizio</string>
+<string name="pause">pausa</string>
+<string name="reset">azzerare</string>	
 </resources>
