@@ -1,0 +1,800 @@
+com.jike.mobile.analogclock.Alarm -> com.jike.mobile.analogclock.Alarm:
+    int id -> a
+    boolean enabled -> b
+    int hour -> c
+    int minutes -> d
+    com.jike.mobile.analogclock.Alarm$DaysOfWeek daysOfWeek -> e
+    long time -> f
+    boolean vibrate -> g
+    java.lang.String label -> h
+    android.net.Uri alert -> i
+    boolean silent -> j
+    int fadeInLength -> k
+    int snoozeInterval -> l
+    int volume -> m
+    int soundId -> n
+    boolean isOnSnooze -> o
+    int soundType -> p
+    android.net.Uri musicUri -> q
+    java.lang.String title -> r
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    java.lang.String getLabelOrDefault(android.content.Context) -> a
+com.jike.mobile.analogclock.Alarm$1 -> com.jike.mobile.analogclock.a:
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+com.jike.mobile.analogclock.Alarm$Columns -> com.jike.mobile.analogclock.b:
+    android.net.Uri CONTENT_URI -> a
+    java.lang.String[] ALARM_QUERY_COLUMNS -> b
+com.jike.mobile.analogclock.Alarm$DaysOfWeek -> com.jike.mobile.analogclock.c:
+    int[] DAY_MAP -> a
+    int mDays -> b
+    java.lang.String toString$5e799b7f(android.content.Context) -> a
+    boolean isSet(int) -> a
+    void set(int,boolean) -> a
+    void set(com.jike.mobile.analogclock.Alarm$DaysOfWeek) -> a
+    int getCoded() -> a
+    boolean[] getBooleanArray() -> b
+    boolean isRepeatSet() -> c
+    int getNextAlarm(java.util.Calendar) -> a
+com.jike.mobile.analogclock.AlarmAlert -> com.jike.mobile.analogclock.AlarmAlert:
+    int mKeyguardRetryCount -> d
+    int MAX_KEYGUARD_CHECKS -> e
+    android.os.Handler mHandler -> f
+    android.content.BroadcastReceiver mScreenOffReceiver -> g
+    void onCreate(android.os.Bundle) -> onCreate
+    void onDestroy() -> onDestroy
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    boolean onKeyUp(int,android.view.KeyEvent) -> onKeyUp
+    void onBackPressed() -> onBackPressed
+    boolean checkRetryCount() -> a
+    void access$0(com.jike.mobile.analogclock.AlarmAlert,android.app.KeyguardManager) -> a
+com.jike.mobile.analogclock.AlarmAlert$1 -> com.jike.mobile.analogclock.d:
+    com.jike.mobile.analogclock.AlarmAlert this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.jike.mobile.analogclock.AlarmAlert$2 -> com.jike.mobile.analogclock.e:
+    com.jike.mobile.analogclock.AlarmAlert this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.jike.mobile.analogclock.AlarmAlertFullScreen -> com.jike.mobile.analogclock.AlarmAlertFullScreen:
+    com.jike.mobile.analogclock.Alarm mAlarm -> a
+    android.content.Context mContext -> b
+    android.os.Handler mFadeInHandler -> c
+    android.content.BroadcastReceiver mReceiver -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    void setTitle() -> a
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    boolean onKeyUp(int,android.view.KeyEvent) -> onKeyUp
+    android.app.NotificationManager getNotificationManager() -> b
+    void dismiss(boolean) -> a
+    void onNewIntent(android.content.Intent) -> onNewIntent
+    void onResume() -> onResume
+    void onDestroy() -> onDestroy
+    boolean dispatchKeyEvent(android.view.KeyEvent) -> dispatchKeyEvent
+    void onBackPressed() -> onBackPressed
+    void access$0(com.jike.mobile.analogclock.AlarmAlertFullScreen) -> a
+    void access$1(com.jike.mobile.analogclock.AlarmAlertFullScreen,boolean) -> a
+com.jike.mobile.analogclock.AlarmAlertFullScreen$1 -> com.jike.mobile.analogclock.f:
+    com.jike.mobile.analogclock.AlarmAlertFullScreen this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.jike.mobile.analogclock.AlarmAlertFullScreen$2 -> com.jike.mobile.analogclock.g:
+    com.jike.mobile.analogclock.AlarmAlertFullScreen this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.jike.mobile.analogclock.AlarmAlertFullScreen$3 -> com.jike.mobile.analogclock.h:
+    com.jike.mobile.analogclock.AlarmAlertFullScreen this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.jike.mobile.analogclock.AlarmAlertWakeLock -> com.jike.mobile.analogclock.i:
+    android.os.PowerManager$WakeLock sCpuWakeLock -> a
+    void acquireCpuWakeLock(android.content.Context) -> a
+    void releaseCpuLock() -> a
+com.jike.mobile.analogclock.AlarmInitReceiver -> com.jike.mobile.analogclock.AlarmInitReceiver:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+    void InitAllAlarms(android.content.Context) -> a
+com.jike.mobile.analogclock.AlarmKlaxon -> com.jike.mobile.analogclock.AlarmKlaxon:
+    android.content.Context mContext -> a
+    int AlarmFadeIn -> b
+    long[] sVibratePattern -> c
+    boolean mPlaying -> d
+    android.os.Vibrator mVibrator -> e
+    android.media.MediaPlayer mMediaPlayer -> f
+    com.jike.mobile.analogclock.Alarm mCurrentAlarm -> g
+    long mStartTime -> h
+    android.telephony.TelephonyManager mTelephonyManager -> i
+    int mInitialCallState -> j
+    android.os.Handler mHandler -> k
+    android.telephony.PhoneStateListener mPhoneStateListener -> l
+    int oriVolume -> m
+    android.os.Handler volumeHandler -> n
+    int i -> o
+    java.lang.Runnable volumeRunnable -> p
+    void onCreate() -> onCreate
+    void onDestroy() -> onDestroy
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+    void onStart(android.content.Intent,int) -> onStart
+    void sendKillBroadcast(com.jike.mobile.analogclock.Alarm) -> a
+    void startAlarm(android.media.MediaPlayer,java.lang.Float) -> a
+    void setDataSourceFromResource(android.content.res.Resources,android.media.MediaPlayer,int) -> a
+    void stop() -> d
+    void access$0(com.jike.mobile.analogclock.AlarmKlaxon,com.jike.mobile.analogclock.Alarm) -> a
+    int access$1(com.jike.mobile.analogclock.AlarmKlaxon) -> a
+    com.jike.mobile.analogclock.Alarm access$2(com.jike.mobile.analogclock.AlarmKlaxon) -> b
+    int access$3() -> a
+    android.media.MediaPlayer access$4(com.jike.mobile.analogclock.AlarmKlaxon) -> c
+    void access$5(int) -> a
+    android.os.Handler access$6() -> b
+    java.lang.Runnable access$7(com.jike.mobile.analogclock.AlarmKlaxon) -> d
+    int access$8() -> c
+    void access$9$495d9ad3(com.jike.mobile.analogclock.AlarmKlaxon) -> e
+com.jike.mobile.analogclock.AlarmKlaxon$1 -> com.jike.mobile.analogclock.j:
+    com.jike.mobile.analogclock.AlarmKlaxon this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.jike.mobile.analogclock.AlarmKlaxon$2 -> com.jike.mobile.analogclock.k:
+    com.jike.mobile.analogclock.AlarmKlaxon this$0 -> a
+    void onCallStateChanged(int,java.lang.String) -> onCallStateChanged
+com.jike.mobile.analogclock.AlarmKlaxon$3 -> com.jike.mobile.analogclock.l:
+    com.jike.mobile.analogclock.AlarmKlaxon this$0 -> a
+    void run() -> run
+com.jike.mobile.analogclock.AlarmKlaxon$4 -> com.jike.mobile.analogclock.m:
+    com.jike.mobile.analogclock.AlarmKlaxon this$0 -> a
+    boolean onError(android.media.MediaPlayer,int,int) -> onError
+com.jike.mobile.analogclock.AlarmProvider -> com.jike.mobile.analogclock.AlarmProvider:
+    android.database.sqlite.SQLiteOpenHelper mOpenHelper -> a
+    android.content.UriMatcher sURLMatcher -> b
+    boolean onCreate() -> onCreate
+    android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String) -> query
+    java.lang.String getType(android.net.Uri) -> getType
+    int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) -> update
+    android.net.Uri insert(android.net.Uri,android.content.ContentValues) -> insert
+    int delete(android.net.Uri,java.lang.String,java.lang.String[]) -> delete
+com.jike.mobile.analogclock.AlarmProvider$DatabaseHelper -> com.jike.mobile.analogclock.n:
+    void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
+    void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
+com.jike.mobile.analogclock.AlarmReceiver -> com.jike.mobile.analogclock.AlarmReceiver:
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+    android.app.NotificationManager getNotificationManager(android.content.Context) -> a
+com.jike.mobile.analogclock.AlarmsMethod -> com.jike.mobile.analogclock.o:
+    long addAlarm(android.content.Context,com.jike.mobile.analogclock.Alarm) -> a
+    android.database.Cursor getFilteredAlarmsCursor(android.content.ContentResolver) -> a
+    android.content.ContentValues createContentValues(com.jike.mobile.analogclock.Alarm) -> b
+    void updateAlarmTime(android.content.Context,com.jike.mobile.analogclock.Alarm) -> b
+    com.jike.mobile.analogclock.Alarm getAlarm(android.content.ContentResolver,int) -> a
+    void updateAlarm(android.content.Context,com.jike.mobile.analogclock.Alarm) -> c
+    long setAlarm(android.content.Context,com.jike.mobile.analogclock.Alarm) -> d
+    void enableAlarmInternal$2091475f(android.content.Context,com.jike.mobile.analogclock.Alarm) -> e
+    void disableExpiredAlarms(android.content.Context) -> a
+    void enableSnoozeAlert(android.content.Context,com.jike.mobile.analogclock.Alarm,long) -> a
+    void turnSnoozeOnOrOff(android.content.Context,com.jike.mobile.analogclock.Alarm,boolean) -> a
+    void enableAlert(android.content.Context,com.jike.mobile.analogclock.Alarm,long) -> b
+    void updateAlarmTime(android.content.Context,com.jike.mobile.analogclock.Alarm,long) -> c
+    void disableSnoozeAlert(android.content.Context,int) -> a
+    void disableAlert(android.content.Context,int) -> b
+    void setStatusBarIcon(android.content.Context) -> c
+    long calculateAlarm(com.jike.mobile.analogclock.Alarm) -> a
+    boolean get24HourMode(android.content.Context) -> b
+    int getSoundRsId(int) -> a
+com.jike.mobile.analogclock.AnalogClockActivity -> com.jike.mobile.analogclock.AnalogClockActivity:
+    int mScreenHeight -> a
+    int SEC_HAND_REFRESH_VALUE -> v
+    int AUTO_LOCK_VALUE -> w
+    com.jike.mobile.analogclock.widget.HandImageView mHourHandImageView -> x
+    com.jike.mobile.analogclock.widget.HandImageView mMinHandImageView -> y
+    com.jike.mobile.analogclock.widget.HandImageView mSecHandImageView -> z
+    com.jike.mobile.analogclock.widget.HandImageView mAlarmHandImageView -> A
+    android.widget.ImageButton mAlarmButton -> B
+    android.widget.ImageButton mStopWatchButton -> C
+    android.widget.ImageButton mSettingButton -> D
+    android.widget.ImageButton mLockButton -> E
+    boolean isSlideLocked -> F
+    android.widget.LinearLayout mShowAlarmTimeLinearLayout -> G
+    android.widget.TextView mTimeTextView -> H
+    boolean on_off -> b
+    int secAngle -> c
+    int lastSecAngle -> d
+    int hourAngle -> e
+    int minAngle -> f
+    int lastMinAngle -> g
+    float AlarmHandAngle -> h
+    float LastAlarmHandAngle -> i
+    android.view.View$OnTouchListener mHandImageViewTouchListener -> I
+    android.view.View$OnClickListener mLockButtonClickListener -> J
+    com.jike.mobile.analogclock.Alarm mAlarm -> K
+    int Alarm_Hour -> L
+    int Alarm_Min -> M
+    boolean am_pm -> N
+    java.lang.String hourTimeString -> O
+    java.lang.String minTimeString -> P
+    java.lang.String ampmString -> Q
+    java.lang.String showalarmtimeString -> R
+    android.view.WindowManager$LayoutParams WinManParams -> S
+    android.view.GestureDetector gestureDetector -> j
+    float rateBrightness -> T
+    com.jike.mobile.analogclock.AnalogClockActivity$GetRunHandTask mGetRunHandTask -> k
+    int alarmHandPressedImg -> l
+    int mRotateCenterX -> m
+    int mRotateCenterY -> n
+    android.content.Context mContext -> U
+    android.os.Handler mRotateHandler -> o
+    java.lang.Runnable mRotateRunnable -> p
+    android.os.Handler mLockAlarmHandler -> q
+    java.lang.Runnable mLockAlarmRunnable -> r
+    android.os.Handler mButtonHideHandler -> s
+    java.lang.Runnable mButtonHideRunnable -> t
+    int count2 -> V
+    int count3 -> W
+    boolean ClockRunning -> u
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void showAlarmTimeView() -> b
+    void showAlarmTimeTextandColor(java.lang.Boolean,java.lang.String) -> a
+    void onPause() -> onPause
+    void onStop() -> onStop
+    boolean onDown(android.view.MotionEvent) -> onDown
+    boolean onFling(android.view.MotionEvent,android.view.MotionEvent,float,float) -> onFling
+    void onLongPress(android.view.MotionEvent) -> onLongPress
+    boolean onScroll(android.view.MotionEvent,android.view.MotionEvent,float,float) -> onScroll
+    void onShowPress(android.view.MotionEvent) -> onShowPress
+    boolean onSingleTapUp(android.view.MotionEvent) -> onSingleTapUp
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+    com.jike.mobile.analogclock.widget.HandImageView access$0(com.jike.mobile.analogclock.AnalogClockActivity) -> a
+    boolean access$1(com.jike.mobile.analogclock.AnalogClockActivity) -> b
+    android.widget.ImageButton access$2(com.jike.mobile.analogclock.AnalogClockActivity) -> c
+    android.widget.ImageButton access$3(com.jike.mobile.analogclock.AnalogClockActivity) -> d
+    void access$4(com.jike.mobile.analogclock.AnalogClockActivity) -> e
+    com.jike.mobile.analogclock.widget.HandImageView access$5(com.jike.mobile.analogclock.AnalogClockActivity) -> f
+    com.jike.mobile.analogclock.widget.HandImageView access$6(com.jike.mobile.analogclock.AnalogClockActivity) -> g
+    com.jike.mobile.analogclock.widget.HandImageView access$7(com.jike.mobile.analogclock.AnalogClockActivity) -> h
+    android.content.Context access$8(com.jike.mobile.analogclock.AnalogClockActivity) -> i
+    com.jike.mobile.analogclock.Alarm access$9(com.jike.mobile.analogclock.AnalogClockActivity) -> j
+    void access$10(com.jike.mobile.analogclock.AnalogClockActivity) -> k
+    void access$11(com.jike.mobile.analogclock.AnalogClockActivity,boolean) -> a
+    android.view.View$OnTouchListener access$12(com.jike.mobile.analogclock.AnalogClockActivity) -> l
+    void access$13(com.jike.mobile.analogclock.AnalogClockActivity,int) -> a
+    void access$14(com.jike.mobile.analogclock.AnalogClockActivity,int) -> b
+    int access$15(com.jike.mobile.analogclock.AnalogClockActivity) -> m
+    boolean access$16$6b349bb9(float,float) -> a
+    boolean access$17() -> a
+    void access$18(boolean) -> a
+    int access$19(com.jike.mobile.analogclock.AnalogClockActivity) -> n
+    void access$20(com.jike.mobile.analogclock.AnalogClockActivity,int) -> c
+    void access$21(com.jike.mobile.analogclock.AnalogClockActivity,int) -> d
+    int access$22(com.jike.mobile.analogclock.AnalogClockActivity) -> o
+    void access$23(com.jike.mobile.analogclock.AnalogClockActivity,java.lang.String) -> a
+    int access$24(com.jike.mobile.analogclock.AnalogClockActivity) -> p
+    void access$25(com.jike.mobile.analogclock.AnalogClockActivity,java.lang.String) -> b
+    void access$26(com.jike.mobile.analogclock.AnalogClockActivity,java.lang.String) -> c
+    java.lang.String access$27(com.jike.mobile.analogclock.AnalogClockActivity) -> q
+    java.lang.String access$28(com.jike.mobile.analogclock.AnalogClockActivity) -> r
+    java.lang.String access$29(com.jike.mobile.analogclock.AnalogClockActivity) -> s
+    void access$30(com.jike.mobile.analogclock.AnalogClockActivity,java.lang.String) -> d
+    java.lang.String access$31(com.jike.mobile.analogclock.AnalogClockActivity) -> t
+    void access$32(com.jike.mobile.analogclock.AnalogClockActivity,java.lang.Boolean,java.lang.String) -> a
+com.jike.mobile.analogclock.AnalogClockActivity$1 -> com.jike.mobile.analogclock.p:
+    com.jike.mobile.analogclock.AnalogClockActivity this$0 -> a
+    void run() -> run
+com.jike.mobile.analogclock.AnalogClockActivity$2 -> com.jike.mobile.analogclock.q:
+    com.jike.mobile.analogclock.AnalogClockActivity this$0 -> a
+    void run() -> run
+com.jike.mobile.analogclock.AnalogClockActivity$3 -> com.jike.mobile.analogclock.r:
+    com.jike.mobile.analogclock.AnalogClockActivity this$0 -> a
+    void run() -> run
+com.jike.mobile.analogclock.AnalogClockActivity$4 -> com.jike.mobile.analogclock.s:
+    com.jike.mobile.analogclock.AnalogClockActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.jike.mobile.analogclock.AnalogClockActivity$5 -> com.jike.mobile.analogclock.t:
+    com.jike.mobile.analogclock.AnalogClockActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.jike.mobile.analogclock.AnalogClockActivity$6 -> com.jike.mobile.analogclock.u:
+    com.jike.mobile.analogclock.AnalogClockActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.jike.mobile.analogclock.AnalogClockActivity$7 -> com.jike.mobile.analogclock.v:
+    com.jike.mobile.analogclock.AnalogClockActivity this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.jike.mobile.analogclock.AnalogClockActivity$8 -> com.jike.mobile.analogclock.w:
+    com.jike.mobile.analogclock.AnalogClockActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.jike.mobile.analogclock.AnalogClockActivity$GetRunHandTask -> com.jike.mobile.analogclock.x:
+    com.jike.mobile.analogclock.AnalogClockActivity this$0 -> a
+    java.lang.Boolean doInBackground$7273979() -> a
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+com.jike.mobile.analogclock.MainActivity -> com.jike.mobile.analogclock.MainActivity:
+    int mRotateCenterX -> a
+    int mRotateCenterY -> b
+    android.content.Intent[] mIntents -> c
+    android.database.Cursor mCursor -> d
+    com.jike.mobile.analogclock.Alarm mAlarm -> e
+    void onCreate(android.os.Bundle) -> onCreate
+com.jike.mobile.analogclock.R -> com.jike.mobile.analogclock.y:
+com.jike.mobile.analogclock.R$styleable -> com.jike.mobile.analogclock.z:
+    int[] handimageview -> a
+com.jike.mobile.analogclock.SettingsPreferenceActivity -> com.jike.mobile.analogclock.SettingsPreferenceActivity:
+    android.content.Context mContext -> a
+    com.jike.mobile.analogclock.settingwidget.RepeatPreference mRepeatPref -> b
+    com.jike.mobile.analogclock.settingwidget.AlertSoundPreference mAlertSoundPref -> c
+    android.preference.CheckBoxPreference mVibratePref -> d
+    android.preference.ListPreference mFadeInLengthListPref -> e
+    android.preference.ListPreference mSnoozeDurationListPref -> f
+    com.jike.mobile.analogclock.settingwidget.JikeVolumePreference mJikeVolumePref -> g
+    android.preference.PreferenceCategory mPreferenceCategory -> h
+    android.preference.ListPreference soundTypeListPreference -> i
+    android.preference.Preference mSongPreference -> j
+    int soundType -> k
+    android.net.Uri uri -> l
+    android.database.Cursor myCursor -> m
+    java.lang.Boolean preferenceChange -> n
+    com.jike.mobile.analogclock.Alarm mAlarm -> o
+    int mVolumeVal -> p
+    int mSnoozeDuration -> q
+    int mFadeInLength -> r
+    boolean mVibrate -> s
+    java.util.Map settingsProperty -> t
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onPreferenceChange(android.preference.Preference,java.lang.Object) -> onPreferenceChange
+    void onResume() -> onResume
+    void onPause() -> onPause
+    boolean onPreferenceTreeClick(android.preference.PreferenceScreen,android.preference.Preference) -> onPreferenceTreeClick
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void savaAlarm() -> g
+    android.preference.PreferenceCategory access$0() -> a
+    com.jike.mobile.analogclock.settingwidget.AlertSoundPreference access$1() -> b
+    android.preference.Preference access$2() -> c
+    void access$3(int) -> a
+    com.jike.mobile.analogclock.Alarm access$4() -> d
+    void access$5(android.net.Uri) -> a
+    android.net.Uri access$6() -> e
+    void access$7(com.jike.mobile.analogclock.SettingsPreferenceActivity,android.database.Cursor) -> a
+    android.database.Cursor access$8(com.jike.mobile.analogclock.SettingsPreferenceActivity) -> a
+    void access$9(boolean) -> a
+    void access$10(int) -> b
+    void access$11(int) -> c
+    void access$12(int) -> d
+    int access$13() -> f
+com.jike.mobile.analogclock.SettingsPreferenceActivity$1 -> com.jike.mobile.analogclock.aa:
+    com.jike.mobile.analogclock.SettingsPreferenceActivity this$0 -> a
+    boolean onPreferenceChange(android.preference.Preference,java.lang.Object) -> onPreferenceChange
+com.jike.mobile.analogclock.SettingsPreferenceActivity$2 -> com.jike.mobile.analogclock.ab:
+    com.jike.mobile.analogclock.SettingsPreferenceActivity this$0 -> a
+    boolean onPreferenceChange(android.preference.Preference,java.lang.Object) -> onPreferenceChange
+com.jike.mobile.analogclock.SettingsPreferenceActivity$3 -> com.jike.mobile.analogclock.ac:
+    com.jike.mobile.analogclock.SettingsPreferenceActivity this$0 -> a
+    boolean onPreferenceChange(android.preference.Preference,java.lang.Object) -> onPreferenceChange
+com.jike.mobile.analogclock.SettingsPreferenceActivity$4 -> com.jike.mobile.analogclock.ad:
+    com.jike.mobile.analogclock.SettingsPreferenceActivity this$0 -> a
+    boolean onPreferenceChange(android.preference.Preference,java.lang.Object) -> onPreferenceChange
+com.jike.mobile.analogclock.SettingsPreferenceActivity$5 -> com.jike.mobile.analogclock.ae:
+    com.jike.mobile.analogclock.SettingsPreferenceActivity this$0 -> a
+    boolean onPreferenceChange(android.preference.Preference,java.lang.Object) -> onPreferenceChange
+com.jike.mobile.analogclock.StopWatchActivity -> com.jike.mobile.analogclock.StopWatchActivity:
+    int mRotateCenterX -> a
+    int mRotateCenterY -> b
+    int timer_stopwatch -> c
+    int STOPWATCH -> d
+    int TIMER -> e
+    android.widget.RelativeLayout mAllRelativeLayout -> f
+    android.widget.Button mStartStopButton -> g
+    android.widget.Button mResetButton -> h
+    android.widget.ImageButton Timer_StopwatchButton -> i
+    android.widget.TextView mAlarmTimeTextView -> j
+    android.widget.TextView mTitleTextView -> k
+    com.jike.mobile.analogclock.widget.HandImageView mSecHandImageView -> l
+    com.jike.mobile.analogclock.widget.HandImageView mMinHandImageView -> m
+    long startTime -> n
+    long countTime -> o
+    int countSec -> p
+    int countMs -> q
+    int countMin -> r
+    java.lang.String countMsString -> s
+    java.lang.String countSecString -> t
+    java.lang.String countMinString -> u
+    java.util.Calendar mCalendar -> v
+    java.lang.String mAlarmTimeString -> w
+    int secAngle -> x
+    int lastSecAngle -> y
+    int minAngle -> z
+    int lastMinAngle -> A
+    boolean isRunning -> B
+    boolean isZeroTime -> C
+    long AnimationFrequency -> D
+    int SecAnimationLevel -> E
+    int MinAnimationLevel -> F
+    int AnimationLevelRate -> G
+    com.jike.mobile.analogclock.Alarm mTimerAlarm -> H
+    android.content.Context mContext -> I
+    android.content.res.Resources res -> J
+    android.view.View$OnTouchListener mMinHandTouchListener -> Q
+    android.os.Handler mSecHandRunHandler -> K
+    java.lang.Runnable mSecHandRunnable -> L
+    android.os.Handler mSecHandReverseRunHandler -> M
+    java.lang.Runnable mSecHandReverseRunnable -> N
+    android.os.Handler mResetAnimationHandler -> O
+    java.lang.Runnable mResetAnimationRunnable -> P
+    void onCreate(android.os.Bundle) -> onCreate
+    void init() -> a
+    void updateTimerText(int,int,int) -> a
+    void resetHand() -> b
+    void onResume() -> onResume
+    void onBackPressed() -> onBackPressed
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void onPause() -> onPause
+    void access$0(com.jike.mobile.analogclock.StopWatchActivity,int,int,int) -> a
+    void access$1(com.jike.mobile.analogclock.StopWatchActivity) -> a
+    int access$2$4bfeb490(int) -> a
+    android.view.View$OnTouchListener access$3(com.jike.mobile.analogclock.StopWatchActivity) -> b
+    void access$4(com.jike.mobile.analogclock.StopWatchActivity) -> c
+com.jike.mobile.analogclock.StopWatchActivity$1 -> com.jike.mobile.analogclock.af:
+    com.jike.mobile.analogclock.StopWatchActivity this$0 -> a
+    void run() -> run
+com.jike.mobile.analogclock.StopWatchActivity$2 -> com.jike.mobile.analogclock.ag:
+    com.jike.mobile.analogclock.StopWatchActivity this$0 -> a
+    void run() -> run
+com.jike.mobile.analogclock.StopWatchActivity$3 -> com.jike.mobile.analogclock.ah:
+    com.jike.mobile.analogclock.StopWatchActivity this$0 -> a
+    void run() -> run
+com.jike.mobile.analogclock.StopWatchActivity$4 -> com.jike.mobile.analogclock.ai:
+    com.jike.mobile.analogclock.StopWatchActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.jike.mobile.analogclock.StopWatchActivity$5 -> com.jike.mobile.analogclock.aj:
+    com.jike.mobile.analogclock.StopWatchActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.jike.mobile.analogclock.StopWatchActivity$6 -> com.jike.mobile.analogclock.ak:
+    com.jike.mobile.analogclock.StopWatchActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.jike.mobile.analogclock.StopWatchActivity$7 -> com.jike.mobile.analogclock.al:
+    com.jike.mobile.analogclock.StopWatchActivity this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.jike.mobile.analogclock.StopWatchActivity$8 -> com.jike.mobile.analogclock.am:
+    com.jike.mobile.analogclock.StopWatchActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.jike.mobile.analogclock.StopWatchActivity$9 -> com.jike.mobile.analogclock.an:
+    com.jike.mobile.analogclock.StopWatchActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.jike.mobile.analogclock.settingwidget.AlertSoundPreference -> com.jike.mobile.analogclock.settingwidget.AlertSoundPreference:
+    android.media.MediaPlayer myMediaPlayer -> c
+    android.content.Context mContext -> d
+    android.content.res.Resources res -> a
+    java.lang.String[] soundNameEntries -> e
+    java.lang.String[] soundEntryValues -> f
+    int RSID -> g
+    android.os.Handler soundHandler -> b
+    java.lang.Runnable SoundsPreviewTask -> h
+    android.view.View onCreateDialogView() -> onCreateDialogView
+    void onDialogClosed(boolean) -> onDialogClosed
+    int getSoundId() -> a
+    void setSoundPrefSummary(int) -> a
+    void onPrepareDialogBuilder(android.app.AlertDialog$Builder) -> onPrepareDialogBuilder
+    void access$0(android.media.MediaPlayer) -> a
+    android.content.Context access$1(com.jike.mobile.analogclock.settingwidget.AlertSoundPreference) -> a
+    int access$2() -> b
+    int access$3$78fa36ef(int) -> b
+    android.media.MediaPlayer access$4() -> c
+    void access$5(int) -> c
+    java.lang.Runnable access$6(com.jike.mobile.analogclock.settingwidget.AlertSoundPreference) -> b
+com.jike.mobile.analogclock.settingwidget.AlertSoundPreference$1 -> com.jike.mobile.analogclock.settingwidget.a:
+    com.jike.mobile.analogclock.settingwidget.AlertSoundPreference this$0 -> a
+    void run() -> run
+com.jike.mobile.analogclock.settingwidget.AlertSoundPreference$2 -> com.jike.mobile.analogclock.settingwidget.b:
+    com.jike.mobile.analogclock.settingwidget.AlertSoundPreference this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.jike.mobile.analogclock.settingwidget.JikeAnalogClockPreference -> com.jike.mobile.analogclock.settingwidget.c:
+    int firstLauched -> a
+    boolean BatteryNeverAlert -> b
+    int VolumeVal -> c
+    int SnoozeDuration -> d
+    int FadeInLength -> e
+    boolean Vibrate -> f
+    int ColorStyle -> g
+    boolean ShowSeconds -> h
+    boolean ShowWeekday -> i
+    boolean HourMode -> j
+    boolean SlideFinger -> k
+    boolean ShakeAble -> l
+    int BatteryMode -> m
+    int ChargeMode -> n
+    float Brightness -> o
+    boolean AlarmAtAmPm -> p
+    void loadStart(android.content.Context) -> a
+    void saveStart(android.content.Context) -> b
+    void loadAdvancedSettingPreference(android.content.Context) -> c
+    void loadBaseSettingPreference(android.content.Context) -> d
+    void saveBaseSettingPreference(android.content.Context) -> e
+com.jike.mobile.analogclock.settingwidget.JikeVolumePreference -> com.jike.mobile.analogclock.settingwidget.JikeVolumePreference:
+    android.content.Context context -> a
+    android.widget.SeekBar sensitivityLevel -> b
+    android.widget.LinearLayout layout -> c
+    int volume -> d
+    android.content.res.Resources res -> e
+    int setVolume(int) -> a
+    void setDialogMessage(java.lang.CharSequence) -> setDialogMessage
+    void onPrepareDialogBuilder(android.app.AlertDialog$Builder) -> onPrepareDialogBuilder
+    void onDialogClosed(boolean) -> onDialogClosed
+com.jike.mobile.analogclock.settingwidget.RepeatPreference -> com.jike.mobile.analogclock.settingwidget.RepeatPreference:
+    com.jike.mobile.analogclock.Alarm$DaysOfWeek mDaysOfWeek -> a
+    com.jike.mobile.analogclock.Alarm$DaysOfWeek mNewDaysOfWeek -> b
+    void onDialogClosed(boolean) -> onDialogClosed
+    void onPrepareDialogBuilder(android.app.AlertDialog$Builder) -> onPrepareDialogBuilder
+    void setDaysOfWeek(com.jike.mobile.analogclock.Alarm$DaysOfWeek) -> a
+    com.jike.mobile.analogclock.Alarm$DaysOfWeek getDaysOfWeek() -> a
+    com.jike.mobile.analogclock.Alarm$DaysOfWeek access$0(com.jike.mobile.analogclock.settingwidget.RepeatPreference) -> a
+com.jike.mobile.analogclock.settingwidget.RepeatPreference$1 -> com.jike.mobile.analogclock.settingwidget.d:
+    com.jike.mobile.analogclock.settingwidget.RepeatPreference this$0 -> a
+    void onClick(android.content.DialogInterface,int,boolean) -> onClick
+com.jike.mobile.analogclock.settingwidget.ToastMaster -> com.jike.mobile.analogclock.settingwidget.e:
+    android.widget.Toast sToast -> a
+    void setToast(android.widget.Toast) -> a
+com.jike.mobile.analogclock.widget.BackgroundImageView -> com.jike.mobile.analogclock.widget.BackgroundImageView:
+    float mRotateDegrees -> d
+    android.graphics.drawable.Drawable handDrawable -> e
+    android.graphics.drawable.Drawable defaultHandDrawable -> f
+    int mBoundsLeft -> g
+    int mBoundsTop -> h
+    int mBoundsRight -> i
+    int mBoundsBottom -> j
+    int centerX -> k
+    int centerY -> l
+    int DrawableWidth -> a
+    int DrawableHeight -> b
+    int count -> c
+    void onDraw(android.graphics.Canvas) -> onDraw
+com.jike.mobile.analogclock.widget.DigitalClock -> com.jike.mobile.analogclock.widget.DigitalClock:
+    java.util.Calendar mCalendar -> a
+    java.lang.String mFormat -> b
+    android.widget.TextView mTimeDisplay -> c
+    com.jike.mobile.analogclock.widget.DigitalClock$AmPm mAmPm -> d
+    android.database.ContentObserver mFormatChangeObserver -> e
+    boolean mLive -> f
+    boolean mAttached -> g
+    android.os.Handler mHandler -> h
+    android.content.BroadcastReceiver mIntentReceiver -> i
+    void onFinishInflate() -> onFinishInflate
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    void updateTime() -> a
+    void setDateFormat() -> b
+    boolean access$0(com.jike.mobile.analogclock.widget.DigitalClock) -> a
+    void access$1(com.jike.mobile.analogclock.widget.DigitalClock,java.util.Calendar) -> a
+    android.os.Handler access$2(com.jike.mobile.analogclock.widget.DigitalClock) -> b
+    void access$3(com.jike.mobile.analogclock.widget.DigitalClock) -> c
+    void access$4(com.jike.mobile.analogclock.widget.DigitalClock) -> d
+com.jike.mobile.analogclock.widget.DigitalClock$1 -> com.jike.mobile.analogclock.widget.a:
+    com.jike.mobile.analogclock.widget.DigitalClock this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+    com.jike.mobile.analogclock.widget.DigitalClock access$0(com.jike.mobile.analogclock.widget.DigitalClock$1) -> a
+com.jike.mobile.analogclock.widget.DigitalClock$1$1 -> com.jike.mobile.analogclock.widget.b:
+    com.jike.mobile.analogclock.widget.DigitalClock$1 this$1 -> a
+    void run() -> run
+com.jike.mobile.analogclock.widget.DigitalClock$AmPm -> com.jike.mobile.analogclock.widget.c:
+    android.widget.TextView mAmPm -> a
+    java.lang.String mAmString -> b
+    java.lang.String mPmString -> c
+    void setShowAmPm(boolean) -> a
+    void setIsMorning(boolean) -> b
+com.jike.mobile.analogclock.widget.DigitalClock$FormatChangeObserver -> com.jike.mobile.analogclock.widget.d:
+    com.jike.mobile.analogclock.widget.DigitalClock this$0 -> a
+    void onChange(boolean) -> onChange
+com.jike.mobile.analogclock.widget.HandImageView -> com.jike.mobile.analogclock.widget.HandImageView:
+    float mRotateDegrees -> d
+    android.graphics.drawable.Drawable handDrawable -> e
+    android.graphics.drawable.Drawable defaultHandDrawable -> f
+    int mBoundsLeft -> g
+    int mBoundsTop -> h
+    int mBoundsRight -> i
+    int mBoundsBottom -> j
+    int centerX -> k
+    int centerY -> l
+    int DrawableWidth -> a
+    int DrawableHeight -> b
+    int count -> c
+    void GetDrawableSize() -> b
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void RotateHanderWithAngle(float) -> a
+    void PostRotateHanderWithAngle(float) -> b
+    void SetHandImageSrc(android.content.Context,int) -> a
+    void SetHandImageAsDefault() -> a
+com.mobclick.android.MobclickAgent -> com.a.a.a:
+    com.mobclick.android.MobclickAgent a -> f
+    int b -> g
+    android.content.Context c -> h
+    android.os.Handler d -> i
+    com.mobclick.android.UmengUpdateListener l -> j
+    com.mobclick.android.UmengOnlineConfigureListener m -> k
+    java.lang.String GPU_VENDER -> a
+    java.lang.String GPU_RENDERER -> b
+    boolean mUpdateOnlyWifi -> c
+    boolean mUseLocationService -> d
+    org.json.JSONObject n -> l
+    boolean updateAutoPopup -> e
+    void onPause(android.content.Context) -> a
+    void onResume(android.content.Context) -> b
+    void onError(android.content.Context) -> c
+    void onEvent(android.content.Context,java.lang.String) -> a
+    void a$1ca8ab7a$510e8a7c(android.content.Context,java.lang.String,long) -> a
+    void onEvent(android.content.Context,java.lang.String,java.util.Map) -> a
+    java.lang.String b(android.content.Context) -> e
+    void a$62dc3a79(android.content.Context,java.lang.String) -> d
+    void c(android.content.Context) -> f
+    void b(android.content.Context,java.lang.String,java.lang.String,long,int) -> a
+    void b(android.content.Context,java.lang.String,java.util.Map,long) -> a
+    void a(android.content.Context,java.lang.String,java.util.Map,java.lang.String) -> a
+    void b(android.content.Context,java.lang.String,java.lang.String) -> a
+    void a(java.lang.String) -> a
+    void a(android.content.Context,android.content.SharedPreferences,java.lang.String,org.json.JSONObject) -> a
+    void b$5ffc00fd(android.content.Context) -> g
+    long[] d(android.content.Context,android.content.SharedPreferences) -> a
+    android.app.AlertDialog b(android.content.Context,org.json.JSONObject) -> d
+    org.json.JSONArray b(org.json.JSONObject,org.json.JSONArray) -> a
+    java.lang.String a$bc2fcf7(android.content.Context,org.json.JSONObject,java.lang.String,boolean) -> a
+    boolean a(java.lang.String,android.content.Context,java.lang.String[]) -> a
+    java.lang.String a(java.io.InputStream) -> a
+    org.json.JSONObject f(android.content.Context) -> h
+    void g(android.content.Context) -> i
+    android.content.SharedPreferences h(android.content.Context) -> j
+    android.content.SharedPreferences i(android.content.Context) -> k
+    android.content.SharedPreferences j(android.content.Context) -> l
+    java.lang.String l(android.content.Context) -> m
+    android.content.SharedPreferences a(android.content.Context) -> d
+    java.lang.String c() -> b
+    android.content.SharedPreferences m(android.content.Context) -> n
+    void onEventBegin(android.content.Context,java.lang.String) -> b
+    void f(android.content.Context,java.lang.String) -> e
+    int g(android.content.Context,java.lang.String) -> f
+    void onEventEnd(android.content.Context,java.lang.String) -> c
+    com.mobclick.android.MobclickAgent a() -> a
+    void a$4bdae0f6(android.content.Context,org.json.JSONObject) -> a
+    void b$4bdae0f6(android.content.Context,org.json.JSONObject) -> b
+    void c$4bdae0f6(android.content.Context,org.json.JSONObject) -> c
+    void a(com.mobclick.android.MobclickAgent,android.content.Context) -> a
+    void a$7e5fd124(com.mobclick.android.MobclickAgent,android.content.Context,java.lang.String) -> a
+    void a$3c668592(com.mobclick.android.MobclickAgent,android.content.Context) -> b
+    void a(com.mobclick.android.MobclickAgent,android.content.Context,java.lang.String,java.lang.String,long,int) -> a
+    void a(com.mobclick.android.MobclickAgent,android.content.Context,java.lang.String,java.util.Map,long) -> a
+    void a(com.mobclick.android.MobclickAgent,android.content.Context,java.lang.String,java.util.Map,java.lang.String) -> a
+    void b(com.mobclick.android.MobclickAgent,android.content.Context,java.lang.String,java.lang.String) -> a
+com.mobclick.android.UmengConstants -> com.a.a.b:
+    long kContinueSessionMillis -> a
+    boolean enableCacheInUpdate -> b
+    boolean testMode -> c
+    boolean LOCATION_OPEN -> d
+    boolean ACTIVITY_DURATION_OPEN -> e
+    boolean canCollectionUserInfo -> f
+    boolean canUseLCT -> g
+    java.lang.String channel -> h
+    java.lang.String LAST_SEND_TIME -> i
+    java.lang.Object saveOnlineConfigMutex -> j
+    java.lang.String[] APPLOG_URL_LIST -> k
+    java.lang.String[] UPDATE_URL_LIST -> l
+    boolean COMPRESS_DATA -> m
+com.mobclick.android.UmengOnlineConfigureListener -> com.a.a.c:
+com.mobclick.android.UmengUpdateListener -> com.a.a.d:
+com.mobclick.android.UpdateStatus -> com.a.a.e:
+    int Yes -> a
+    int No -> b
+    int NoneWifi -> c
+    int Timeout -> d
+com.mobclick.android.a -> com.a.a.f:
+    android.location.LocationManager a -> a
+    android.content.Context b -> b
+    android.location.Location a() -> a
+com.mobclick.android.b -> com.a.a.g:
+    java.lang.Object a -> a
+    com.mobclick.android.MobclickAgent b -> b
+    android.content.Context c -> c
+    org.json.JSONObject d -> d
+    void run() -> run
+com.mobclick.android.c -> com.a.a.h:
+    com.mobclick.android.e a -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.mobclick.android.d -> com.a.a.i:
+    com.mobclick.android.e a -> a
+    void run() -> run
+com.mobclick.android.e -> com.a.a.j:
+    android.content.Context a -> a
+    int b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    java.lang.String f -> f
+    android.app.Notification g -> g
+    android.app.NotificationManager h -> h
+    int i -> i
+    boolean j -> j
+    boolean k -> k
+    boolean l -> l
+    android.os.Handler m -> m
+    long o -> n
+    long p -> o
+    long q -> p
+    boolean r -> q
+    int a(java.lang.String,java.lang.String) -> a
+    void c() -> a
+    boolean f() -> b
+    int a(java.io.InputStream,java.io.FileOutputStream) -> a
+    long b(boolean) -> a
+    void c(java.lang.String) -> a
+    java.lang.String a(com.mobclick.android.e) -> a
+    java.lang.String b(com.mobclick.android.e) -> b
+    android.content.Context c(com.mobclick.android.e) -> c
+    void a$547eb07c(com.mobclick.android.e) -> d
+    void d(com.mobclick.android.e) -> e
+    boolean e(com.mobclick.android.e) -> f
+    android.os.Handler f(com.mobclick.android.e) -> g
+    boolean g(com.mobclick.android.e) -> h
+    boolean h(com.mobclick.android.e) -> i
+    void b(com.mobclick.android.e,boolean) -> a
+com.mobclick.android.f -> com.a.a.k:
+    java.lang.Object a -> a
+    android.content.Context b -> b
+    int c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    java.lang.String f -> f
+    java.lang.String g -> g
+    int h -> h
+    long i -> i
+    java.util.Map j -> j
+    java.lang.String k -> k
+    void run() -> run
+com.mobclick.android.g -> com.a.a.l:
+    long a -> a
+    org.apache.http.HttpRequestInterceptor d -> b
+    org.apache.http.client.HttpClient e -> c
+    java.lang.RuntimeException f -> d
+    com.mobclick.android.h g -> e
+    com.mobclick.android.g a(java.lang.String) -> a
+    void finalize() -> finalize
+    void a() -> a
+    org.apache.http.params.HttpParams getParams() -> getParams
+    org.apache.http.conn.ClientConnectionManager getConnectionManager() -> getConnectionManager
+    org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest) -> execute
+    org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest,org.apache.http.protocol.HttpContext) -> execute
+    org.apache.http.HttpResponse execute(org.apache.http.HttpHost,org.apache.http.HttpRequest) -> execute
+    org.apache.http.HttpResponse execute(org.apache.http.HttpHost,org.apache.http.HttpRequest,org.apache.http.protocol.HttpContext) -> execute
+    java.lang.Object execute(org.apache.http.client.methods.HttpUriRequest,org.apache.http.client.ResponseHandler) -> execute
+    java.lang.Object execute(org.apache.http.client.methods.HttpUriRequest,org.apache.http.client.ResponseHandler,org.apache.http.protocol.HttpContext) -> execute
+    java.lang.Object execute(org.apache.http.HttpHost,org.apache.http.HttpRequest,org.apache.http.client.ResponseHandler) -> execute
+    java.lang.Object execute(org.apache.http.HttpHost,org.apache.http.HttpRequest,org.apache.http.client.ResponseHandler,org.apache.http.protocol.HttpContext) -> execute
+    void b() -> b
+    com.mobclick.android.h a(com.mobclick.android.g) -> a
+    java.lang.String a$501fc75d(org.apache.http.client.methods.HttpUriRequest) -> a
+    org.apache.http.HttpRequestInterceptor c() -> c
+com.mobclick.android.h -> com.a.a.m:
+    java.lang.String a -> a
+    int b -> b
+    boolean a(com.mobclick.android.h) -> a
+    void a(com.mobclick.android.h,java.lang.String) -> a
+com.mobclick.android.i -> com.a.a.n:
+    java.lang.String a -> a
+    int b -> b
+    boolean a(android.content.Context,java.lang.String) -> a
+    java.lang.String b(android.content.Context) -> a
+    java.lang.String a(java.lang.String,boolean) -> a
+    java.lang.String c(android.content.Context) -> h
+    java.lang.String d(android.content.Context) -> b
+    java.lang.String k(android.content.Context) -> i
+    java.lang.String a() -> b
+    byte[] a(java.lang.String) -> a
+    java.lang.String b() -> a
+    org.json.JSONObject f(android.content.Context) -> c
+    java.lang.String[] g(android.content.Context) -> d
+    java.lang.String h(android.content.Context) -> e
+    boolean i(android.content.Context) -> f
+    int a(android.content.Context,java.lang.String,java.lang.String) -> a
+    org.json.JSONObject m(android.content.Context) -> j
+    java.lang.String j(android.content.Context) -> g
+com.mobclick.android.j -> com.a.a.o:
+    android.content.Context a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.mobclick.android.k -> com.a.a.p:
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.mobclick.android.l -> com.a.a.q:
+    com.mobclick.android.g a -> a
+    void process(org.apache.http.HttpRequest,org.apache.http.protocol.HttpContext) -> process
+com.mobclick.android.m -> com.a.a.r:
+    java.lang.String a(android.content.Context) -> a
+com.mobclick.android.o -> com.a.a.s:
+    void process(org.apache.http.HttpRequest,org.apache.http.protocol.HttpContext) -> process
+com.mobclick.android.p -> com.a.a.t:
+    com.mobclick.android.g a -> a
+    org.apache.http.protocol.BasicHttpProcessor createHttpProcessor() -> createHttpProcessor
+    org.apache.http.protocol.HttpContext createHttpContext() -> createHttpContext

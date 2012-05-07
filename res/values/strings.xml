@@ -145,7 +145,6 @@
 
     <!-- Text to display in the notification when the alarm has been snoozed -->
     <string name="alarm_notify_snooze_text">Alarm set for <xliff:g id="time">%s</xliff:g>. Select to cancel.</string>
-    <string name="alarm_ampm">Alarm at am/pm</string>
     <string-array name="sound_type_values">
       <item>0</item>
       <item>1</item>

@@ -1,0 +1,297 @@
+android.annotation.SuppressLint
+android.annotation.TargetApi
+com.jike.mobile.analogclock.Alarm$Columns:
+    public static final java.lang.String HOUR
+    public static final java.lang.String MINUTES
+    public static final java.lang.String DAYS_OF_WEEK
+    public static final java.lang.String ALARM_TIME
+    public static final java.lang.String ENABLED
+    public static final java.lang.String VIBRATE
+    public static final java.lang.String MESSAGE
+    public static final java.lang.String FADE_IN_LENGTH
+    public static final java.lang.String SNOOZE_INTERVAL
+    public static final java.lang.String VOLUME
+    public static final java.lang.String SOUND_ID
+    public static final java.lang.String IS_ON_SNOOZE
+    public static final java.lang.String SOUND_TYPE
+    public static final java.lang.String MUSIC_URI
+    public static final java.lang.String TITLE
+    public static final java.lang.String ALERT
+    public static final java.lang.String DEFAULT_SORT_ORDER
+    public static final java.lang.String WHERE_ENABLED
+    public static final java.lang.String WHERE_SNOOZED
+    public static final int ALARM_ID_INDEX
+    public static final int ALARM_HOUR_INDEX
+    public static final int ALARM_MINUTES_INDEX
+    public static final int ALARM_DAYS_OF_WEEK_INDEX
+    public static final int ALARM_TIME_INDEX
+    public static final int ALARM_ENABLED_INDEX
+    public static final int ALARM_VIBRATE_INDEX
+    public static final int ALARM_MESSAGE_INDEX
+    public static final int ALARM_FADE_IN_LENGTH_INDEX
+    public static final int ALARM_SNOOZE_INTERVAL_INDEX
+    public static final int ALARM_VOLUME_INDEX
+    public static final int ALARM_SOUND_ID_INDEX
+    public static final int ALARM_IS_ON_SNOOZE_INDEX
+    public static final int ALARM_SOUND_TYPE_INDEX
+    public static final int ALARM_MUSIC_URI_INDEX
+    public static final int ALARM_TITLE_INDEX
+    public static final int ALARM_ALERT_INDEX
+    112:112:public Alarm$Columns()
+com.jike.mobile.analogclock.AlarmAlertFullScreen:
+    protected static final java.lang.String SCREEN_OFF
+com.jike.mobile.analogclock.AlarmAlertWakeLock:
+    12:12:AlarmAlertWakeLock()
+com.jike.mobile.analogclock.AlarmKlaxon:
+    private static final int ALARM_TIMEOUT_SECONDS
+    private static final int KILLER
+    private static final float IN_CALL_VOLUME
+com.jike.mobile.analogclock.AlarmProvider:
+    private static final int ALARMS
+    private static final int ALARMS_ID
+com.jike.mobile.analogclock.AlarmProvider$DatabaseHelper:
+    private static final java.lang.String DATABASE_NAME
+    private static final int DATABASE_VERSION
+com.jike.mobile.analogclock.AlarmsMethod:
+    public static final java.lang.String ALARM_ALERT_ACTION
+    public static final java.lang.String SNOOZE_ALARM_ALERT_ACTION
+    public static final java.lang.String ALARM_DONE_ACTION
+    public static final java.lang.String ALARM_SNOOZE_ACTION
+    public static final java.lang.String ALARM_DISMISS_ACTION
+    public static final java.lang.String ALARM_KILLED
+    public static final java.lang.String ALARM_KILLED_TIMEOUT
+    public static final java.lang.String ALARM_ALERT_SILENT
+    public static final java.lang.String CANCEL_SNOOZE
+    public static final java.lang.String ALARM_INTENT_EXTRA
+    public static final java.lang.String ALARM_RAW_DATA
+    public static final java.lang.String ALARM_ID
+    static final java.lang.String PREF_SNOOZE_ID
+    static final java.lang.String PREF_SNOOZE_TIME
+    private static final java.lang.String DM12
+    private static final java.lang.String DM24
+    static final java.lang.String M12
+    public static final java.lang.String M24
+    26:26:public AlarmsMethod()
+    91:103:public static void deleteAlarm(android.content.Context,int)
+    532:557:public static com.jike.mobile.analogclock.Alarm findLatestAlert(android.content.Context)
+    643:652:public static boolean isHaveSnoozeAlarm(android.content.Context)
+    702:703:static java.lang.String formatTime(android.content.Context,int,int,com.jike.mobile.analogclock.Alarm$DaysOfWeek)
+    741:743:static void popAlarmSetToast(android.content.Context,int,int,com.jike.mobile.analogclock.Alarm$DaysOfWeek)
+com.jike.mobile.analogclock.AnalogClockActivity:
+    int lastHourAngle
+com.jike.mobile.analogclock.BuildConfig
+com.jike.mobile.analogclock.R:
+    10:10:public R()
+com.jike.mobile.analogclock.R$array
+com.jike.mobile.analogclock.R$attr
+com.jike.mobile.analogclock.R$color
+com.jike.mobile.analogclock.R$drawable
+com.jike.mobile.analogclock.R$id
+com.jike.mobile.analogclock.R$layout
+com.jike.mobile.analogclock.R$raw
+com.jike.mobile.analogclock.R$string
+com.jike.mobile.analogclock.R$style
+com.jike.mobile.analogclock.R$styleable:
+    public static final int handimageview_myhandsrc
+    443:443:public R$styleable()
+com.jike.mobile.analogclock.R$xml
+com.jike.mobile.analogclock.SettingsPreferenceActivity:
+    static final java.lang.String KEY_VOLUME_BEHAVIOR
+    static final java.lang.String KEY_COLOR_STYLE
+    static final java.lang.String KEY_SHOW_SECONDS
+    static final java.lang.String KEY_SHOW_WEEKDAY
+    static final java.lang.String KEY_HOUR_MODE
+    static final java.lang.String KEY_SLIDE_FINGER
+    static final java.lang.String KEY_SHAKE
+    static final java.lang.String KEY_BATTERY_MODE
+    static final java.lang.String KEY_CHARGE_MODE
+    private static final int SONG_CODE
+com.jike.mobile.analogclock.settingwidget.AlertSoundPreference:
+    static java.lang.Thread mSoundThread
+com.jike.mobile.analogclock.settingwidget.JikeAnalogClockPreference:
+    private static final java.lang.String PREFS_NAME_STRING
+    private static final java.lang.String FIRST_LAUCHED
+    private static final java.lang.String BATTERY_NEVER_ALERT
+    private static final java.lang.String VOLUME_VAL_STRING
+    private static final java.lang.String SNOOZE_DURATION_STRING
+    private static final java.lang.String FADE_IN_LENGTH_STRING
+    private static final java.lang.String VIBRATE_STRING
+    private static final java.lang.String COLOR_STYLE
+    private static final java.lang.String SHOW_SECONDS
+    private static final java.lang.String SHOW_WEEKDAY
+    private static final java.lang.String HOUR_MODE
+    private static final java.lang.String SLIDE_FINGER
+    private static final java.lang.String SHAKE_ABLE
+    private static final java.lang.String BATTERY_MODE
+    private static final java.lang.String CHARGE_MODE
+    private static final java.lang.String BRIGHTNESS
+    private static final java.lang.String ALARMATAMPM
+    11:11:public JikeAnalogClockPreference()
+    149:156:public static void saveAdvancedSettingPreference(android.content.Context)
+com.jike.mobile.analogclock.settingwidget.ToastMaster:
+    10:12:private ToastMaster()
+    21:24:public static void cancelToast()
+com.jike.mobile.analogclock.widget.BackgroundImageView:
+    98:100:public void RotateHanderWithAngle(float)
+    108:110:public void PostRotateHanderWithAngle(float)
+    115:118:public void SetHandImageSrc(android.content.Context,int)
+    123:126:public void SetHandImageAsDefault()
+com.jike.mobile.analogclock.widget.DigitalClock:
+    private static final java.lang.String M12
+    98:99:public DigitalClock(android.content.Context)
+    161:163:void updateTime(java.util.Calendar)
+    181:182:void setLive(boolean)
+    185:186:void setTypeface(android.graphics.Typeface)
+com.jike.mobile.analogclock.widget.Log:
+    public static final java.lang.String LOGTAG
+    public static final boolean LOGV
+    4:4:public Log()
+com.mobclick.android.Gender
+com.mobclick.android.MobclickAgent:
+    private static final int e
+    private static final int f
+    private static final int g
+    private static final int h
+    private static final int i
+    private static final int j
+    private static final int k
+    private static final java.lang.String o
+    private static final java.lang.String p
+    private static final java.lang.String q
+    private static final java.lang.String r
+    private static final java.lang.String s
+    private static final java.lang.String t
+    private static final java.lang.String u
+    private static final java.lang.String v
+    private static final java.lang.String w
+    private static final java.lang.String x
+    private static final java.lang.String y
+    private static final java.lang.String z
+    private static final java.lang.String A
+    private static final java.lang.String B
+    private static final java.lang.String C
+    private static final java.lang.String D
+    private static final java.lang.String E
+    private static final java.lang.String F
+    private static final java.lang.String G
+    private static final java.lang.String H
+    private static final java.lang.String I
+    private static final java.lang.String J
+    private static final java.lang.String K
+    private static final java.lang.String L
+    private static final java.lang.String M
+    private static final java.lang.String N
+    private static final java.lang.String O
+    private static final java.lang.String P
+    private static final java.lang.String Q
+    private static final java.lang.String R
+    private static final java.lang.String S
+    private static final java.lang.String T
+    private static final java.lang.String U
+    private static final java.lang.String V
+    private static final java.lang.String W
+    private static final java.lang.String X
+    private static final java.lang.String Y
+    private static final java.lang.String Z
+    private static final java.lang.String aa
+    private static final java.lang.String ab
+    private static synthetic int[] ac
+    public static org.json.JSONObject getUpdateInfo()
+    public static void setAutoLocation(boolean)
+    public static void setUpdateOnlyWifi(boolean)
+    public static void setUpdateListener(com.mobclick.android.UmengUpdateListener)
+    public static void setSessionContinueMillis(long)
+    public static void setOnlineConfigureListener(com.mobclick.android.UmengOnlineConfigureListener)
+    public static void openActivityDurationTrack(boolean)
+    public static boolean isDownloadingAPK()
+    public static void setDebugMode(boolean)
+    public static void setDefaultReportPolicy(android.content.Context,int)
+    public static void reportError(android.content.Context,java.lang.String)
+    public static void flush(android.content.Context)
+    public static void update(android.content.Context,java.lang.String)
+    public static void update(android.content.Context)
+    public static void onEvent(android.content.Context,java.lang.String,java.lang.String,int)
+    public static void onEvent(android.content.Context,java.lang.String,java.lang.String)
+    public static void enterPage(android.content.Context,java.lang.String)
+    private synchronized void a(android.content.Context,java.lang.String)
+    private synchronized void d(android.content.Context)
+    private void e(android.content.Context)
+    private org.json.JSONArray a(org.json.JSONObject,org.json.JSONArray)
+    public static void setOpenGLContext(javax.microedition.khronos.opengles.GL10)
+    public static java.lang.String getConfigParams(android.content.Context,java.lang.String)
+    private static java.lang.String o(android.content.Context)
+    private static void a(android.content.Context,int)
+    public static void updateOnlineConfig(android.content.Context,java.lang.String)
+    public static void updateOnlineConfig(android.content.Context)
+    private synchronized void e(android.content.Context,java.lang.String)
+    public static void setGender(android.content.Context,com.mobclick.android.Gender)
+    public static void setAge(android.content.Context,int)
+    public static void setUserID(android.content.Context,java.lang.String,java.lang.String)
+    public static void update(android.content.Context,long)
+    public static void onEventDuration(android.content.Context,java.lang.String,long)
+    public static void onEventDuration(android.content.Context,java.lang.String,java.lang.String,long)
+    public static void onEventDuration(android.content.Context,java.lang.String,java.util.Map,long)
+    public static void onEventBegin(android.content.Context,java.lang.String,java.lang.String)
+    public static void onEventEnd(android.content.Context,java.lang.String,java.lang.String)
+    public static void onKVEventBegin(android.content.Context,java.lang.String,java.util.Map,java.lang.String)
+    public static void onKVEventEnd(android.content.Context,java.lang.String,java.lang.String)
+    static synthetic int[] b()
+com.mobclick.android.ReportPolicy
+com.mobclick.android.UmengConstants:
+    public static final java.lang.String OS
+    public static final java.lang.String SDK_TYPE
+    public static final java.lang.String SDK_VERSION
+    public static final int DEFAULT_TIMEZONE
+    static final int a
+    public static final java.lang.String LOG_TAG
+    public static final java.lang.String CONFIG_URL
+    public static final java.lang.String CONFIG_URL_BACK
+    static final java.lang.String b
+    static final java.lang.String c
+    static final java.lang.String d
+    static final java.lang.String e
+    static final java.lang.String f
+    static final java.lang.String g
+    public static final java.lang.String Online_Config_Local_Policy
+    public static final java.lang.String Online_Config_Net_Policy
+    public static final java.lang.String Online_Config_Last_Modify
+    public static final java.lang.String KEY_LAST_UPDATE_TIME
+    public static final java.lang.String KEY_UPDATE_INTERNAL
+    public UmengConstants()
+com.mobclick.android.UpdateStatus:
+    public UpdateStatus()
+com.mobclick.android.e:
+    private static final int n
+    public boolean a()
+    public static boolean b()
+    public void a(java.lang.String)
+    public void b(java.lang.String)
+    public void a(int)
+    public void a(boolean)
+com.mobclick.android.f:
+    f(android.content.Context,java.lang.String,java.util.Map,java.lang.String,int)
+com.mobclick.android.g:
+    private static final int b
+    private static final java.lang.String c
+    public static void a(org.apache.http.HttpRequest)
+    public static java.io.InputStream a(org.apache.http.HttpEntity)
+    public static org.apache.http.entity.AbstractHttpEntity a(byte[],android.content.ContentResolver)
+    public static long a(android.content.ContentResolver)
+    public void a(java.lang.String,int)
+com.mobclick.android.h:
+    private h(java.lang.String,int)
+    synthetic h(java.lang.String,int,com.mobclick.android.h)
+com.mobclick.android.i:
+    public i()
+    public static void a(android.content.Context)
+    public static java.lang.String[] a(javax.microedition.khronos.opengles.GL10)
+    public static java.lang.String a(java.util.Date)
+    public static java.util.Date b(java.lang.String)
+    public static int a(java.util.Date,java.util.Date)
+    public static java.util.Date e(android.content.Context)
+    public static void a(android.content.Context,java.util.Date)
+    public static java.lang.String a(org.json.JSONObject)
+    public static java.lang.String b(org.json.JSONObject)
+com.mobclick.android.m:
+    public m()
+com.mobclick.android.n
