@@ -138,7 +138,7 @@ public class JikeAnalogClockPreference {
         SharedPreferences settings = context.getSharedPreferences(PREFS_NAME_STRING, 0);
         VolumeVal = settings.getInt(VOLUME_VAL_STRING, 80);
         SnoozeDuration = settings.getInt(SNOOZE_DURATION_STRING, 10);
-        FadeInLength = settings.getInt(FADE_IN_LENGTH_STRING, 0);
+        FadeInLength = settings.getInt(FADE_IN_LENGTH_STRING, 1);
         Vibrate = settings.getBoolean(VIBRATE_STRING, false);
     }
 

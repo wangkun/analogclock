@@ -1,8 +1,10 @@
 
 package com.jike.mobile.analogclock;
 
-import java.security.interfaces.RSAKey;
-import java.util.Calendar;
+import com.jike.mobile.analogclock.settingwidget.JikeAnalogClockPreference;
+import com.jike.mobile.analogclock.widget.HandImageView;
+import com.jike.mobile.analogclock.widget.Log;
+import com.mobclick.android.MobclickAgent;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -23,9 +25,7 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.jike.mobile.analogclock.settingwidget.JikeAnalogClockPreference;
-import com.jike.mobile.analogclock.widget.HandImageView;
-import com.jike.mobile.analogclock.widget.Log;
+import java.util.Calendar;
 
 /**
  * StopWatch and CountDown Timer
@@ -118,7 +118,6 @@ public class StopWatchActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         Log.v("StopWatchActivity onCreate");
         setContentView(R.layout.stopwatch);
@@ -156,7 +155,6 @@ public class StopWatchActivity extends Activity {
 
         mStartStopButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 mResetAnimationHandler.removeCallbacks(mResetAnimationRunnable);
                 if (timer_stopwatch == TIMER) {
                     if (countMin == 0 && countMs == 0) {
@@ -166,7 +164,7 @@ public class StopWatchActivity extends Activity {
                         isRunning = !isRunning;
                         mSecHandReverseRunHandler.removeCallbacks(mSecHandReverseRunnable);
 //                        mStartStopButton.setImageResource(R.drawable.start_btn);
-                        mStartStopButton.setText(R.string.start);//??TODO:
+                        mStartStopButton.setText(R.string.start);// 
                         mResetButton.setClickable(true);
 
                         mTimerAlarm.time = 0L;
@@ -197,7 +195,6 @@ public class StopWatchActivity extends Activity {
                     isRunning = !isRunning;
                     mSecHandRunHandler.removeCallbacks(mSecHandRunnable);
 //                    mStartStopButton.setImageResource(R.drawable.start_btn);
-//                    TODO??
                     mStartStopButton.setText(R.string.start);
                     mResetButton.setClickable(true);
                 } else {
@@ -211,7 +208,7 @@ public class StopWatchActivity extends Activity {
                     }
                     mSecHandRunHandler.post(mSecHandRunnable);
 //                    mStartStopButton.setImageResource(R.drawable.stop_btn);
-                    mStartStopButton.setText(R.string.pause);//??TODO:
+                    mStartStopButton.setText(R.string.pause);//?? :
                     mResetButton.setClickable(false);
                 }
             }
@@ -219,7 +216,6 @@ public class StopWatchActivity extends Activity {
 
         mResetButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 if (isRunning) {
                     return;
                 }
@@ -237,7 +233,6 @@ public class StopWatchActivity extends Activity {
         Timer_StopwatchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 Log.v("Timer_StopwatchButton.setOnClickListener");
                 if (isRunning) {
                     return;
@@ -249,6 +244,8 @@ public class StopWatchActivity extends Activity {
                         Timer_StopwatchButton.setImageResource(R.drawable.stopwatch_icon);
                         mMinHandImageView.setOnTouchListener(mMinHandTouchListener);
                         mTitleTextView.setText(getString(R.string.stopwatch_title));
+                        MobclickAgent.onEventBegin(mContext, "timer");
+                        MobclickAgent.onEventEnd(mContext, "stopwatch");
                         break;
 
                     case STOPWATCH:
@@ -256,8 +253,9 @@ public class StopWatchActivity extends Activity {
                         Timer_StopwatchButton.setImageResource(R.drawable.timer_icon);
                         mMinHandImageView.setOnTouchListener(null);
                         mTitleTextView.setText(getString(R.string.timer_title));
+                        MobclickAgent.onEventBegin(mContext, "stopwatch");
+                        MobclickAgent.onEventEnd(mContext, "timer");
                         break;
-
                     default:
                         break;
                 }
@@ -270,7 +268,6 @@ public class StopWatchActivity extends Activity {
         mMinHandTouchListener = new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                // TODO Auto-generated method stub
                 if (isRunning) {
                     return false;
                 }
@@ -285,6 +282,7 @@ public class StopWatchActivity extends Activity {
                 // }
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
+                        mSecHandImageView.PostRotateHanderWithAngle(0);
                         break;
                     case MotionEvent.ACTION_MOVE:
                         double Angle = Math.atan2(relativeX, relativeY);
@@ -321,17 +319,18 @@ public class StopWatchActivity extends Activity {
     }
 
     private void init() {
-        // TODO Auto-generated method stub
         switch (timer_stopwatch) {
             case TIMER:
                 Timer_StopwatchButton.setImageResource(R.drawable.stopwatch_icon);
                 mMinHandImageView.setOnTouchListener(mMinHandTouchListener);
                 mTitleTextView.setText(R.string.timer_title);
+                MobclickAgent.onEventBegin(mContext, "timer");
                 break;
             case STOPWATCH:
                 Timer_StopwatchButton.setImageResource(R.drawable.timer_icon);
                 mTitleTextView.setText(R.string.stopwatch_title);
                 mMinHandImageView.setOnTouchListener(null);
+                MobclickAgent.onEventBegin(mContext, "stopwatch");
                 break;
             default:
                 break;
@@ -351,7 +350,6 @@ public class StopWatchActivity extends Activity {
 
     final Runnable mSecHandRunnable = new Runnable() {
         public void run() {
-            // TODO Auto-generated method stub
             countTime = System.currentTimeMillis() - startTime;
             if (countTime < 0L)
                 countTime = 0L;
@@ -393,7 +391,6 @@ public class StopWatchActivity extends Activity {
     final Runnable mSecHandReverseRunnable = new Runnable() {
         @Override
         public void run() {
-            // TODO Auto-generated method stub
             countTime = startTime - System.currentTimeMillis();
             if (countTime < 0L) {
                 countTime = 0L;
@@ -401,7 +398,7 @@ public class StopWatchActivity extends Activity {
                 resetHand();
                 isRunning = false;
 //                mStartStopButton.setImageResource(R.drawable.start_btn);
-                mStartStopButton.setText(R.string.start);//??TODO:
+                mStartStopButton.setText(R.string.start);//?? :
                 mResetButton.setClickable(true);
                 return;
             }
@@ -473,7 +470,6 @@ public class StopWatchActivity extends Activity {
 
         @Override
         public void run() {
-            // TODO Auto-generated method stub
 
             if (secAngle > 0 && minAngle > 0) {
                 secAngle = secAngle - SecAnimationLevel * AnimationLevelRate;
@@ -518,7 +514,6 @@ public class StopWatchActivity extends Activity {
 
     @Override
     protected void onResume() {
-        // TODO Auto-generated method stub
         JikeAnalogClockPreference.loadStart(mContext);
         timer_stopwatch = JikeAnalogClockPreference.firstLauched;
         if (!isRunning) {
@@ -526,6 +521,7 @@ public class StopWatchActivity extends Activity {
         }
         Log.v("onResume finish");
         super.onResume();
+        MobclickAgent.onResume(this);
     }
 
     protected void dialog() {
@@ -549,13 +545,11 @@ public class StopWatchActivity extends Activity {
 
     @Override
     public void onBackPressed() {
-        // TODO Auto-generated method stub
         super.onBackPressed();
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        // TODO Auto-generated method stub
         if (keyCode == KeyEvent.KEYCODE_BACK && isRunning) {
             dialog();
             return true;
@@ -565,10 +559,12 @@ public class StopWatchActivity extends Activity {
 
     @Override
     protected void onPause() {
-        // TODO Auto-generated method stub
         JikeAnalogClockPreference.firstLauched = timer_stopwatch;
         JikeAnalogClockPreference.saveStart(mContext);
         super.onPause();
+        MobclickAgent.onPause(this);
+        MobclickAgent.onEventEnd(this, "timer");
+        MobclickAgent.onEvent(this, "stopwatch");
     }
 
 }

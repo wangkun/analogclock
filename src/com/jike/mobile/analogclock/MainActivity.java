@@ -2,6 +2,7 @@
 package com.jike.mobile.analogclock;
 
 import com.jike.mobile.analogclock.widget.Log;
+import com.mobclick.android.MobclickAgent;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -24,7 +25,7 @@ public class MainActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        MobclickAgent.onError(this);
         setContentView(R.layout.main);
 
         mCursor = AlarmsMethod.getAlarmsCursor(getContentResolver());

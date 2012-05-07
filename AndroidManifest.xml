@@ -8,10 +8,15 @@
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <uses-permission android:name="android.permission.DEVICE_POWER" />
     
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--for Umeng sdk -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
 
     <uses-sdk android:minSdkVersion="7" />
 
@@ -95,7 +100,9 @@
                 <action android:name="android.intent.action.LOCALE_CHANGED" />
             </intent-filter>
         </receiver>
-    	
+        <!-- for Umeng SDK -->
+    	<meta-data android:value="4fa7407652701549a6000013" android:name="UMENG_APPKEY"></meta-data>
+		<meta-data android:value="Channel ID" android:name="UMENG_CHANNEL"/>
     </application>
 
 </manifest>

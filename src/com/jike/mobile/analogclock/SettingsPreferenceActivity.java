@@ -1,6 +1,13 @@
 
 package com.jike.mobile.analogclock;
 
+import com.jike.mobile.analogclock.settingwidget.AlertSoundPreference;
+import com.jike.mobile.analogclock.settingwidget.JikeAnalogClockPreference;
+import com.jike.mobile.analogclock.settingwidget.JikeVolumePreference;
+import com.jike.mobile.analogclock.settingwidget.RepeatPreference;
+import com.jike.mobile.analogclock.widget.Log;
+import com.mobclick.android.MobclickAgent;
+
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -14,11 +21,8 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.MediaStore;
 
-import com.jike.mobile.analogclock.settingwidget.AlertSoundPreference;
-import com.jike.mobile.analogclock.settingwidget.JikeAnalogClockPreference;
-import com.jike.mobile.analogclock.settingwidget.JikeVolumePreference;
-import com.jike.mobile.analogclock.settingwidget.RepeatPreference;
-import com.jike.mobile.analogclock.widget.Log;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SettingsPreferenceActivity extends PreferenceActivity implements
         Preference.OnPreferenceChangeListener {
@@ -82,6 +86,8 @@ public class SettingsPreferenceActivity extends PreferenceActivity implements
     private static int mFadeInLength;
 
     private static boolean mVibrate;
+    
+    private static Map<String,String> settingsProperty= new HashMap<String, String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -164,6 +170,7 @@ public class SettingsPreferenceActivity extends PreferenceActivity implements
         // TODO Auto-generated method stub
         super.onResume();
         refresh();
+        MobclickAgent.onResume(this);
     }
 
     @Override
@@ -176,6 +183,8 @@ public class SettingsPreferenceActivity extends PreferenceActivity implements
             savaAlarm();
         }
         JikeAnalogClockPreference.saveBaseSettingPreference(mContext);
+        MobclickAgent.onPause(this);
+        MobclickAgent.onEvent(this, "setting_alarm",settingsProperty);
     }
 
     @Override
@@ -397,7 +406,13 @@ public class SettingsPreferenceActivity extends PreferenceActivity implements
         mAlarm.fadeInLength = mFadeInLength;
         mAlarm.volume = mVolumeVal;
         AlarmsMethod.updateAlarm(mContext, mAlarm);
-
+        settingsProperty.put("daysOfWeek", mAlarm.daysOfWeek.getCoded()+"");
+        settingsProperty.put("soundType",mAlarm.soundType+"");
+        settingsProperty.put("soundId",mAlarm.soundId+"");
+        settingsProperty.put("mVibrate",mAlarm.vibrate+"");
+        settingsProperty.put("snoozeInterval",mAlarm.snoozeInterval+"");
+        settingsProperty.put("fadeInLength",mAlarm.fadeInLength+"");
+        settingsProperty.put("volume",mAlarm.volume+"");
     }
 
     // private static ContentValues createAdvancedContentValues(Alarm alarm) {
@@ -418,5 +433,5 @@ public class SettingsPreferenceActivity extends PreferenceActivity implements
     // values.put(Alarm.Columns.VOLUME, mVolumeVal);
     // return values;
     // }
-
+    
 }

@@ -25,6 +25,7 @@ import android.widget.TextView;
 import com.jike.mobile.analogclock.settingwidget.JikeAnalogClockPreference;
 import com.jike.mobile.analogclock.widget.HandImageView;
 import com.jike.mobile.analogclock.widget.Log;
+import com.mobclick.android.MobclickAgent;
 
 /**
  * @author Kun Wang 2012-3-23 15:30:31
@@ -164,13 +165,13 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
         mSettingButton.setOnClickListener(new OnClickListener() {
 
             public void onClick(View v) {
-                // TODO Auto-generated method stub
+                // ： Auto-generated method stub
                 startActivity(new Intent(AnalogClockActivity.this, SettingsPreferenceActivity.class));
             }
         });
         mAlarmButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                // TODO Auto-generated method stub
+                MobclickAgent.onEvent(mContext, "alarm_on_off");
                 if (!isSlideLocked) {
                     mLockButton.performClick();
                 }
@@ -195,7 +196,8 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
         mLockButtonClickListener = new OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
+                // ： Auto-generated method stub
+                MobclickAgent.onEvent(mContext, "set_alarm_on_off");
                 if (isSlideLocked) {
                     isSlideLocked = !isSlideLocked;
                     // mLockButton.setText("set alarm");
@@ -218,7 +220,7 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
 
         mHandImageViewTouchListener = new OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
-                // TODO Auto-generated method stub
+                // ： Auto-generated method stub
                 // float x = event.getXPrecision()*event.getX()+event.getX();
                 // float y = event.getYPrecision()*event.getY()+event.getY();
                 float x = event.getX();
@@ -233,6 +235,7 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
                 Log.v("X + Y : " + x + " + " + y);
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
+                        MobclickAgent.onEventBegin(mContext, "slide_alarm_hand");
                         mAlarmHandImageView.SetHandImageSrc(mContext, alarmHandPressedImg);
                         // mAlarmHandImageView.SetHandImageSrc(mContext,
                         // R.drawable.sec_hand_jk1);
@@ -293,6 +296,7 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
                         Log.e("jk draw count= " + mAlarmHandImageView.count);
                         Log.e("jk count2= " + count2);
                         Log.e("jk count3= " + count3);
+                        MobclickAgent.onEventEnd(mContext, "slide_alarm_hand");
                         break;
                     default:
                         break;
@@ -304,7 +308,7 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
         mStopWatchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
+                // ： Auto-generated method stub
                 startActivity(MainActivity.mIntents[1]);
             }
         });
@@ -316,7 +320,7 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
 
         @Override
         public void run() {
-            // TODO Auto-generated method stub
+            // ： Auto-generated method stub
             mAlarmHandImageView.RotateHanderWithAngle(AlarmHandAngle);
             LastAlarmHandAngle = AlarmHandAngle;
         }
@@ -327,7 +331,7 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
     final Runnable mLockAlarmRunnable = new Runnable() {
         @Override
         public void run() {
-            // TODO Auto-generated method stub
+            // ： Auto-generated method stub
             if (!isSlideLocked) {
                 mLockButton.performClick();
             }
@@ -339,7 +343,7 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
     final Runnable mButtonHideRunnable = new Runnable() {
         @Override
         public void run() {
-            // TODO Auto-generated method stub
+            // ： Auto-generated method stub
             if (mAlarmButton.isShown()) {
                 HideAlarmAndSettingButton();
             }
@@ -357,13 +361,15 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
 
     @Override
     protected void onResume() {
-        // TODO Auto-generated method stub
+        // ： Auto-generated method stub
         super.onResume();
         JikeAnalogClockPreference.loadStart(mContext);
         Init();
         ClockRunning = true;
         mGetRunHandTask = new GetRunHandTask();
         mGetRunHandTask.execute("");
+        MobclickAgent.onResume(this);
+        MobclickAgent.onEventBegin(this, "show_clock");
     }
 
     private int count2 = 0;
@@ -373,7 +379,7 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
     public boolean ClockRunning;
 
     private void Init() {
-        // TODO Auto-generated method stub
+        // ： Auto-generated method stub
         JikeAnalogClockPreference.loadBaseSettingPreference(mContext);
         WinManParams.screenBrightness = JikeAnalogClockPreference.Brightness;
         getWindow().setAttributes(WinManParams);
@@ -406,7 +412,7 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
         } else {
             mLockButton.setVisibility(View.INVISIBLE);
         }
-//        初始化stopwatchButton
+        // 初始化stopwatchButton
         switch (JikeAnalogClockPreference.firstLauched) {
             case 1:
                 mStopWatchButton.setImageResource(R.drawable.stopwatch_icon);
@@ -466,7 +472,7 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
 
     @Override
     protected void onPause() {
-        // TODO Auto-generated method stub
+        // ： Auto-generated method stub
         super.onPause();
         ClockRunning = false;
         if (!isSlideLocked) {
@@ -474,35 +480,37 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
         }
         JikeAnalogClockPreference.saveStart(mContext);
         // Debug.stopMethodTracing();
+        MobclickAgent.onPause(this);
+        MobclickAgent.onEventEnd(this, "show_clock");
     }
 
     @Override
     protected void onStop() {
-        // TODO Auto-generated method stub
+        // ： Auto-generated method stub
         super.onStop();
     }
 
     @Override
     public boolean onDown(MotionEvent e) {
-        // TODO Auto-generated method stub
+        // ： Auto-generated method stub
         return false;
     }
 
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-        // TODO Auto-generated method stub
+        // ： Auto-generated method stub
         return false;
     }
 
     @Override
     public void onLongPress(MotionEvent e) {
-        // TODO Auto-generated method stub
+        // ： Auto-generated method stub
 
     }
 
     @Override
     public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-        // TODO Auto-generated method stub
+        // ： Auto-generated method stub
         // // if(isSlide == false || mflashlightView.isShown()){
         // // return false;
         // // }
@@ -521,25 +529,25 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
 
     @Override
     public void onShowPress(MotionEvent e) {
-        // TODO Auto-generated method stub
+        // ： Auto-generated method stub
 
     }
 
     @Override
     public boolean onSingleTapUp(MotionEvent e) {
-        // TODO Auto-generated method stub
+        // ： Auto-generated method stub
         return false;
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        // TODO Auto-generated method stub
+        // ： Auto-generated method stub
         return gestureDetector.onTouchEvent(event);
     }
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        // TODO Auto-generated method stub
+        // ： Auto-generated method stub
         Log.e("touch");
         return gestureDetector.onTouchEvent(event);
     }
@@ -548,7 +556,7 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
 
         @Override
         protected Boolean doInBackground(String... params) {
-            // TODO Auto-generated method stub
+            // ： Auto-generated method stub
             while (ClockRunning) {
                 long time = System.currentTimeMillis();
                 Calendar mCalendar = Calendar.getInstance();
@@ -573,7 +581,6 @@ public class AnalogClockActivity extends Activity implements OnTouchListener, On
                 try {
                     Thread.sleep(SEC_HAND_REFRESH_VALUE);
                 } catch (InterruptedException e) {
-                    // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
             }
