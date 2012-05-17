@@ -14,7 +14,7 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="16dp"
         android:layout_alignTop="@+id/alarm_buttom" 
-        android:layout_marginTop="40dp" >
+        android:layout_marginTop="55dp" >
 
         <TextView
             android:id="@+id/alarm_at"
